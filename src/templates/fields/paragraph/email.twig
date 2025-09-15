@@ -1,0 +1,10 @@
+{# Only render if includeInEmail is true #}
+{% if field.includeInEmail %}
+    <tr>
+        <td colspan="2" style="padding: 10px 0;">
+            <div style="color: #666; font-size: 14px; line-height: 1.5;">
+                {{ field.getRenderedParagraphContent()|raw }}
+            </div>
+        </td>
+    </tr>
+{% endif %}
