@@ -1,5 +1,5 @@
 {
-    "name": "lindemannrock/formie-paragraph-field",
+    "name": "lindemannrock/craft-formie-paragraph-field",
     "description": "Paragraph field for Formie - Provides a multi-line paragraph field type for Craft CMS Formie plugin",
     "type": "craft-plugin",
     "version": "1.1.0",
@@ -19,6 +19,12 @@
             "homepage": "https://lindemannrock.com"
         }
     ],
+    "support": {
+        "email": "support@lindemannrock.com",
+        "issues": "https://github.com/LindemannRock/craft-formie-paragraph-field/issues",
+        "source": "https://github.com/LindemannRock/craft-formie-paragraph-field",
+        "docs": "https://github.com/LindemannRock/craft-formie-paragraph-field/blob/main/README.md"
+    },
     "require": {
         "php": "^8.0.2",
         "craftcms/cms": "^5.0.0",
@@ -34,8 +40,8 @@
         "handle": "formie-paragraph-field",
         "developer": "LindemannRock",
         "developerUrl": "https://lindemannrock.com",
-        "documentationUrl": "https://github.com/lindemannrock/formie-paragraph-field/blob/master/README.md",
-        "changelogUrl": "https://github.com/lindemannrock/formie-paragraph-field/blob/master/CHANGELOG.md",
+        "documentationUrl": "https://github.com/LindemannRock/craft-formie-paragraph-field/blob/main/README.md",
+        "changelogUrl": "https://github.com/LindemannRock/craft-formie-paragraph-field/blob/main/CHANGELOG.md",
         "class": "lindemannrock\\formieparagraphfield\\FormieParagraphField"
     }
 }

@@ -34,7 +34,7 @@ Until published on Packagist, install directly from the repository:
 
 ```bash
 cd /path/to/project
-composer config repositories.formie-paragraph-field vcs https://github.com/LindemannRock/formie-paragraph-field
+composer config repositories.formie-paragraph-field vcs https://github.com/LindemannRock/craft-formie-paragraph-field
 composer require lindemannrock/formie-paragraph-field:dev-main
 ./craft plugin/install formie-paragraph-field
 ```
@@ -153,8 +153,8 @@ Paragraph fields are rendered automatically by Formie:
 
 ## Support
 
-- **Documentation**: [https://github.com/LindemannRock/formie-paragraph-field](https://github.com/LindemannRock/formie-paragraph-field)
-- **Issues**: [https://github.com/LindemannRock/formie-paragraph-field/issues](https://github.com/LindemannRock/formie-paragraph-field/issues)
+- **Documentation**: [https://github.com/LindemannRock/craft-formie-paragraph-field](https://github.com/LindemannRock/craft-formie-paragraph-field)
+- **Issues**: [https://github.com/LindemannRock/craft-formie-paragraph-field/issues](https://github.com/LindemannRock/craft-formie-paragraph-field/issues)
 - **Email**: [support@lindemannrock.com](mailto:support@lindemannrock.com)
 
 ## License
