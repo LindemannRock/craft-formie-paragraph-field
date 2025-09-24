@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v1.1.0...v1.1.1) (2025-09-24)
+
+
+### Bug Fixes
+
+* update repository name and links in README and composer.json; enhance .gitignore for better file exclusion ([c934b19](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/c934b19ccd952ed9980c2110967460b4773041eb))
+
 ## [1.1.0](https://github.com/LindemannRock/formie-paragraph-field/compare/v1.0.0...v1.1.0) (2025-09-15)
 
 
