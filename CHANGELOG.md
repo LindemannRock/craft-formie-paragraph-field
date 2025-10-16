@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v1.1.2...v1.1.3) (2025-10-16)
+
+
+### Bug Fixes
+
+* change license from proprietary to MIT in composer.json ([33fb347](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/33fb347c21c5f382640cfbe295d6c50a194f6dd5))
+
 ## [1.1.2](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v1.1.1...v1.1.2) (2025-10-16)
 
 
