@@ -28,32 +28,25 @@ A Craft CMS plugin that provides a paragraph field type for Verbb's Formie form 
 
 ## Installation
 
-### Via Composer (Development)
-
-Until published on Packagist, install directly from the repository:
+### Via Composer
 
 ```bash
 cd /path/to/project
-composer config repositories.formie-paragraph-field vcs https://github.com/LindemannRock/craft-formie-paragraph-field
-composer require lindemannrock/formie-paragraph-field:dev-main
+composer require lindemannrock/craft-formie-paragraph-field
 ./craft plugin/install formie-paragraph-field
 ```
 
-### Via Composer (Production - Coming Soon)
-
-Once published on Packagist:
+### Using DDEV
 
 ```bash
 cd /path/to/project
-composer require lindemannrock/formie-paragraph-field
-./craft plugin/install formie-paragraph-field
+ddev composer require lindemannrock/craft-formie-paragraph-field
+ddev craft plugin/install formie-paragraph-field
 ```
 
-### Via Plugin Store (Future)
+### Via Control Panel
 
-1. Go to the Plugin Store in your Craft control panel
-2. Search for "Formie Paragraph Field"
-3. Click "Install"
+In the Control Panel, go to Settings → Plugins and click "Install" for Formie Paragraph Field.
 
 ## Configuration
 
