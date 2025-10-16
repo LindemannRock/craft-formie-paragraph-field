@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v1.1.3...v1.1.4) (2025-10-16)
+
+
+### Bug Fixes
+
+* update installation instructions for Composer and DDEV ([b88b6b3](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/b88b6b3234743ca4455ceb4f2b3d1424807aa57f))
+
 ## [1.1.3](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v1.1.2...v1.1.3) (2025-10-16)
 
 
