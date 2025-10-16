@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v1.1.1...v1.1.2) (2025-10-16)
+
+
+### Bug Fixes
+
+* update author details and PHP version requirement in composer.json ([43e1603](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/43e16037b57e54006320bbc87b7b86c7bb6c2906))
+
 ## [1.1.1](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v1.1.0...v1.1.1) (2025-09-24)
 
 
