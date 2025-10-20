@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.0.0...v3.0.1) (2025-10-20)
+
+
+### Miscellaneous Chores
+
+* update README with additional badges ([7a70de0](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/7a70de0c100d4d3c09d5468c678383ca53ae8f53))
+
 ## [3.0.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v1.1.4...v3.0.0) (2025-10-20)
 
 
