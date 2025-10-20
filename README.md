@@ -1,5 +1,11 @@
 # Formie Paragraph Field Plugin
 
+[![Latest Version](https://img.shields.io/packagist/v/lindemannrock/craft-formie-paragraph-field.svg)](https://packagist.org/packages/lindemannrock/craft-formie-paragraph-field)
+[![Craft CMS](https://img.shields.io/badge/Craft%20CMS-5.0+-orange.svg)](https://craftcms.com/)
+[![Formie](https://img.shields.io/badge/Formie-3.0+-purple.svg)](https://verbb.io/craft-plugins/formie)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net/)
+[![License](https://img.shields.io/packagist/l/lindemannrock/craft-formie-paragraph-field.svg)](LICENSE)
+
 A Craft CMS plugin that provides a paragraph field type for Verbb's Formie form builder, allowing styled paragraph content with configurable text sizes and Twig template support.
 
 ## Requirements
