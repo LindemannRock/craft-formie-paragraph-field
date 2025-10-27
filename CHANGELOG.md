@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.0.1...v3.0.2) (2025-10-27)
+
+
+### Bug Fixes
+
+* update README and configuration documentation for clarity and accuracy ([0a20978](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/0a20978397ba932df14f5d6a8811ad4777b67a73))
+
 ## [3.0.1](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.0.0...v3.0.1) (2025-10-20)
 
 
