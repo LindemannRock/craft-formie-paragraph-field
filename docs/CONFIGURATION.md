@@ -6,7 +6,7 @@ You can override plugin settings by creating a `formie-paragraph-field.php` file
 
 ### Basic Setup
 
-1. Copy `vendor/lindemannrock/formie-paragraph-field/src/config.php` to `config/formie-paragraph-field.php`
+1. Copy `vendor/lindemannrock/craft-formie-paragraph-field/src/config.php` to `config/formie-paragraph-field.php`
 2. Modify the settings as needed
 
 ### Available Settings
@@ -14,23 +14,10 @@ You can override plugin settings by creating a `formie-paragraph-field.php` file
 ```php
 <?php
 return [
-    // Plugin name shown in Control Panel (optional)
-    'pluginName' => 'Custom Paragraph Field Name',
-    
-    // Default text size for new paragraph fields
-    'defaultTextSize' => 'textLG',
-    
-    // Custom text size options (replaces built-in options when defined)
-    'customTextSizes' => [
-        'textDisplay' => [
-            'label' => 'Display Heading',
-            'classes' => 'text-3xl md:text-5xl font-bold leading-tight'
-        ],
-        'textDisclaimer' => [
-            'label' => 'Disclaimer',
-            'classes' => 'text-xs text-gray-600 italic'
-        ],
-    ]
+    // General Settings
+    'pluginName' => 'Formie Paragraph Field',
+    'defaultTextSize' => 'textBase',
+    'customTextSizes' => [],
 ];
 ```
 
@@ -44,18 +31,19 @@ return [
     // Global settings
     '*' => [
         'defaultTextSize' => 'textBase',
+        'customTextSizes' => [],
     ],
-    
+
     // Development environment
     'dev' => [
-        'customTextSizes' => [
-            'textDebug' => [
-                'label' => 'Debug Text',
-                'classes' => 'text-red-500 border border-red-300 p-2'
-            ]
-        ]
+        // Development-specific settings can go here
     ],
-    
+
+    // Staging environment
+    'staging' => [
+        // Staging-specific settings can go here
+    ],
+
     // Production environment
     'production' => [
         'defaultTextSize' => 'textLG',
@@ -69,31 +57,39 @@ return [
 ];
 ```
 
-### Using Environment Variables
-
-All settings support environment variables:
-
-```php
-return [
-    'defaultTextSize' => getenv('PARAGRAPH_DEFAULT_SIZE') ?: 'textBase',
-    'pluginName' => getenv('PARAGRAPH_PLUGIN_NAME') ?: 'Formie Paragraph Field',
-];
-```
-
 ### Setting Descriptions
 
 #### General Settings
 
-- **pluginName**: The name shown in the Control Panel (usually set via Settings → Plugins)
-- **defaultTextSize**: Default text size for new paragraph fields (must match an available size value)
+##### pluginName
+Display name for the plugin in Craft CP navigation.
+- **Type:** `string`
+- **Default:** `'Formie Paragraph Field'`
 
-#### Custom Text Sizes
+##### defaultTextSize
+Default text size for new paragraph fields.
+- **Type:** `string`
+- **Options:** `'textXS'`, `'textSM'`, `'textBase'`, `'textLG'`, `'textXL'` (or custom size keys when customTextSizes is defined)
+- **Default:** `'textBase'`
 
-- **customTextSizes**: Array of text size options that **replaces** built-in options when defined
-  - **Key**: Unique identifier (e.g., `textHuge`, `textBrand`)
-  - **label**: Text shown in Formie field dropdown
-  - **classes**: CSS classes applied to the paragraph (any framework: Tailwind, Bootstrap, custom)
-  - **Behavior**: If defined, only these options appear (built-in options are hidden)
+##### customTextSizes
+Custom text size options that replace built-in options when defined.
+- **Type:** `array`
+- **Default:** `[]` (empty = use built-in options)
+- **Format:** Array of size options with `label` and `classes` keys
+- **Behavior:** When defined, these options **completely replace** the built-in size options
+
+### Built-in Text Sizes
+
+Default text sizes available when `customTextSizes` is empty:
+
+| Value | Label | CSS Classes |
+|-------|-------|-------------|
+| `textXS` | Extra Small | `text-xs` |
+| `textSM` | Small | `text-sm` |
+| `textBase` | Base | `text-base` |
+| `textLG` | Large | `text-base sm:text-lg md:text-xl` |
+| `textXL` | Extra Large | `text-lg sm:text-xl md:text-2xl` |
 
 ### Custom Text Size Examples
 
@@ -146,26 +142,29 @@ return [
 ]
 ```
 
-### Built-in Text Sizes
-
-Default text sizes that are always available:
-
-| Value | Label | CSS Classes |
-|-------|-------|-------------|
-| `textXS` | Extra Small | `text-xs` |
-| `textSM` | Small | `text-sm` |
-| `textBase` | Base | `text-base` |
-| `textLG` | Large | `text-base sm:text-lg md:text-xl` |
-| `textXL` | Extra Large | `text-lg sm:text-xl md:text-2xl` |
-
 ### Precedence
 
 Settings are loaded in this order (later overrides earlier):
 
-1. Default plugin settings (hardcoded)
-2. Database-stored settings (from Control Panel)
+1. Default plugin settings
+2. Database-stored settings (from CP)
 3. Config file settings
 4. Environment-specific config settings
+
+**Note:** Config file settings always override database settings, making them ideal for production environments where you want to enforce specific values.
+
+### Using Environment Variables
+
+All settings support environment variables:
+
+```php
+use craft\helpers\App;
+
+return [
+    'defaultTextSize' => App::env('PARAGRAPH_DEFAULT_SIZE') ?: 'textBase',
+    'pluginName' => App::env('PARAGRAPH_PLUGIN_NAME') ?: 'Formie Paragraph Field',
+];
+```
 
 ### Best Practices
 

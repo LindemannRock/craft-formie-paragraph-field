@@ -61,21 +61,25 @@ In the Control Panel, go to Settings → Plugins and click "Install" for Formie 
 Navigate to **Settings → Plugins → Formie Paragraph Field** to configure:
 - **Default Text Size**: Set the default size for new paragraph fields
 
-### Advanced Configuration
+### Config File
 
-For detailed configuration options, see [Configuration Guide](docs/CONFIGURATION.md).
+Create a `config/formie-paragraph-field.php` file to override default settings:
 
-Create a config file for custom settings:
+```bash
+cp vendor/lindemannrock/craft-formie-paragraph-field/src/config.php config/formie-paragraph-field.php
+```
+
+Example configuration:
 
 ```php
 // config/formie-paragraph-field.php
 return [
     // Plugin name (optional - usually set via Control Panel)
     'pluginName' => 'Custom Paragraph Field',
-    
+
     // Default text size for new fields
     'defaultTextSize' => 'textLG',
-    
+
     // Custom text size options (replaces built-in options when defined)
     'customTextSizes' => [
         'textHuge' => [
@@ -90,7 +94,9 @@ return [
 ];
 ```
 
-**Note**: 
+See [Configuration Documentation](docs/CONFIGURATION.md) for all available options.
+
+**Note**:
 - You can use any CSS classes - Tailwind, Bootstrap, or your own custom styles
 - When `customTextSizes` is defined, it **replaces** the built-in options entirely
 - Without a config file, you get 5 built-in text sizes (XS to XL)
@@ -110,7 +116,7 @@ return [
 ### Adding a Paragraph Field
 
 1. Open your form in Formie's form builder
-2. Click "Add Field" and select "Paragraph" 
+2. Click "Add Field" and select "Paragraph"
 3. Configure the field:
    - **Content**: Enter paragraph text (supports Twig syntax)
    - **Text Size**: Choose from available size options
