@@ -24,12 +24,12 @@ class Settings extends Model
      * @var string|null The public-facing name of the plugin
      */
     public ?string $pluginName = 'Formie Paragraph Field';
-    
+
     /**
      * @var string Default text size (textXS, textSM, textBase, textLG, textXL)
      */
     public string $defaultTextSize = 'textBase';
-    
+
     /**
      * @var array Custom text size options
      * Format: ['value' => 'label', 'classes' => 'tailwind classes']
@@ -47,7 +47,7 @@ class Settings extends Model
             [['defaultTextSize'], 'validateDefaultTextSize'],
         ];
     }
-    
+
     /**
      * Validate default text size against available options
      */
@@ -55,7 +55,7 @@ class Settings extends Model
     {
         $availableOptions = $this->getAvailableTextSizes();
         $availableValues = array_keys($availableOptions);
-        
+
         if (!in_array($this->$attribute, $availableValues)) {
             $this->addError($attribute, 'Default text size must be one of: ' . implode(', ', $availableValues));
         }
@@ -72,7 +72,7 @@ class Settings extends Model
             'customTextSizes' => Craft::t('formie-paragraph-field', 'Custom Text Sizes'),
         ];
     }
-    
+
     /**
      * Get all available text sizes (custom if defined, otherwise default)
      * @return array
@@ -83,7 +83,7 @@ class Settings extends Model
         if (!empty($this->customTextSizes)) {
             return $this->customTextSizes;
         }
-        
+
         // Otherwise use default sizes
         return [
             'textXS' => [
@@ -91,7 +91,7 @@ class Settings extends Model
                 'classes' => 'text-xs'
             ],
             'textSM' => [
-                'label' => 'Small', 
+                'label' => 'Small',
                 'classes' => 'text-sm'
             ],
             'textBase' => [
@@ -108,7 +108,7 @@ class Settings extends Model
             ],
         ];
     }
-    
+
     /**
      * Get text size classes for a given size value
      * @param string $size
@@ -126,7 +126,7 @@ class Settings extends Model
      * @param string $setting
      * @return bool
      */
-    public function isOverridden(string $setting): bool
+    public function isOverriddenByConfig(string $setting): bool
     {
         $configFileSettings = Craft::$app->getConfig()->getConfigFromFile('formie-paragraph-field');
         return isset($configFileSettings[$setting]);
