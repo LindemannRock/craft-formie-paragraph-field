@@ -38,7 +38,13 @@ A Craft CMS plugin that provides a paragraph field type for Verbb's Formie form 
 
 ```bash
 cd /path/to/project
+```
+
+```bash
 composer require lindemannrock/craft-formie-paragraph-field
+```
+
+```bash
 ./craft plugin/install formie-paragraph-field
 ```
 
@@ -46,7 +52,13 @@ composer require lindemannrock/craft-formie-paragraph-field
 
 ```bash
 cd /path/to/project
+```
+
+```bash
 ddev composer require lindemannrock/craft-formie-paragraph-field
+```
+
+```bash
 ddev craft plugin/install formie-paragraph-field
 ```
 
