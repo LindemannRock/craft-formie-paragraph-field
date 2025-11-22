@@ -47,7 +47,14 @@ class Paragraph extends CosmeticField
     // Properties
     // =========================================================================
 
+    /**
+     * @var string|null Paragraph content (supports Twig)
+     */
     public ?string $paragraphContent = null;
+
+    /**
+     * @var string Text size key (e.g., textBase, textLG, custom)
+     */
     public string $textSize = 'textBase';
 
     // Public Methods

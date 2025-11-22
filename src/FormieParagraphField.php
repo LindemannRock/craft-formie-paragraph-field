@@ -34,17 +34,17 @@ use yii\base\Event;
 class FormieParagraphField extends Plugin
 {
     /**
-     * @var FormieParagraphField
+     * @var FormieParagraphField|null Singleton plugin instance
      */
     public static FormieParagraphField $plugin;
 
     /**
-     * @inheritdoc
+     * @var string Plugin schema version for migrations
      */
     public string $schemaVersion = '1.0.0';
 
     /**
-     * @inheritdoc
+     * @var bool Whether the plugin exposes a control panel settings page
      */
     public bool $hasCpSettings = true;
 
