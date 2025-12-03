@@ -33,10 +33,18 @@
         "craftcms/cms": "^5.0.0",
         "verbb/formie": "^3.0.0"
     },
+    "require-dev": {
+        "craftcms/phpstan": "dev-main"
+    },
     "autoload": {
         "psr-4": {
             "lindemannrock\\formieparagraphfield\\": "src/"
         }
+    },
+    "scripts": {
+        "phpstan": "phpstan --ansi --memory-limit=1G",
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --fix --ansi"
     },
     "extra": {
         "name": "Formie Paragraph Field",

@@ -1,0 +1,11 @@
+includes:
+    - ../../vendor/craftcms/phpstan/phpstan.neon
+
+parameters:
+    level: 5
+    phpVersion: 80300
+    paths:
+        - src
+    ignoreErrors:
+        # CosmeticField from Formie properly implements FieldInterface but PHPStan can't resolve the hierarchy
+        - '#Interface craft\\base\\FieldInterface requires implementing class to extend craft\\base\\Field#'

@@ -88,23 +88,23 @@ class Settings extends Model
         return [
             'textXS' => [
                 'label' => 'Extra Small',
-                'classes' => 'text-xs'
+                'classes' => 'text-xs',
             ],
             'textSM' => [
                 'label' => 'Small',
-                'classes' => 'text-sm'
+                'classes' => 'text-sm',
             ],
             'textBase' => [
                 'label' => 'Base',
-                'classes' => 'text-base'
+                'classes' => 'text-base',
             ],
             'textLG' => [
                 'label' => 'Large',
-                'classes' => 'text-base sm:text-lg md:text-xl'
+                'classes' => 'text-base sm:text-lg md:text-xl',
             ],
             'textXL' => [
                 'label' => 'Extra Large',
-                'classes' => 'text-lg sm:text-xl md:text-2xl'
+                'classes' => 'text-lg sm:text-xl md:text-2xl',
             ],
         ];
     }

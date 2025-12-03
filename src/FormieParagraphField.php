@@ -11,12 +11,12 @@
 namespace lindemannrock\formieparagraphfield;
 
 use Craft;
-use lindemannrock\formieparagraphfield\fields\Paragraph;
-use lindemannrock\formieparagraphfield\models\Settings;
 use craft\base\Model;
 use craft\base\Plugin;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\web\View;
+use lindemannrock\formieparagraphfield\fields\Paragraph;
+use lindemannrock\formieparagraphfield\models\Settings;
 use verbb\formie\events\RegisterFieldsEvent;
 use verbb\formie\services\Fields;
 use yii\base\Event;
@@ -36,7 +36,7 @@ class FormieParagraphField extends Plugin
     /**
      * @var FormieParagraphField|null Singleton plugin instance
      */
-    public static FormieParagraphField $plugin;
+    public static ?FormieParagraphField $plugin = null;
 
     /**
      * @var string Plugin schema version for migrations
@@ -101,7 +101,7 @@ class FormieParagraphField extends Plugin
         
         // Set the plugin name from settings
         $settings = $this->getSettings();
-        if ($settings && !empty($settings->pluginName)) {
+        if (!empty($settings->pluginName)) {
             $this->name = $settings->pluginName;
         }
 

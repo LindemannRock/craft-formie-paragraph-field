@@ -8,18 +8,18 @@
 
 namespace lindemannrock\formieparagraphfield\fields;
 
-use verbb\formie\base\CosmeticField;
-use verbb\formie\helpers\SchemaHelper;
-use verbb\formie\models\HtmlTag;
-use lindemannrock\formieparagraphfield\FormieParagraphField;
-
 use Craft;
 use craft\base\ElementInterface;
 use craft\helpers\Template;
-use Twig\Markup;
 use GraphQL\Type\Definition\Type;
 
+use lindemannrock\formieparagraphfield\FormieParagraphField;
+use Twig\Markup;
+use verbb\formie\base\CosmeticField;
 use verbb\formie\elements\Form;
+use verbb\formie\helpers\SchemaHelper;
+
+use verbb\formie\models\HtmlTag;
 
 class Paragraph extends CosmeticField
 {
@@ -69,9 +69,9 @@ class Paragraph extends CosmeticField
         
         // Get plugin settings and apply defaults if properties are not set or are default
         $plugin = FormieParagraphField::$plugin;
-        if ($plugin && $this->textSize === 'textBase') {
+        if ($plugin !== null && $this->textSize === 'textBase') {
             $settings = $plugin->getSettings();
-            if ($settings && $settings->defaultTextSize) {
+            if ($settings->defaultTextSize) {
                 $this->textSize = $settings->defaultTextSize;
             }
         }
@@ -83,23 +83,21 @@ class Paragraph extends CosmeticField
      */
     private function getTextSizeOptions(): array
     {
-        $options = [];
         $plugin = FormieParagraphField::$plugin;
-        
-        if ($plugin) {
+
+        if ($plugin !== null) {
             $settings = $plugin->getSettings();
-            if ($settings) {
-                $availableSizes = $settings->getAvailableTextSizes();
-                foreach ($availableSizes as $value => $config) {
-                    $options[] = [
-                        'label' => Craft::t('formie', $config['label']),
-                        'value' => $value
-                    ];
-                }
-                return $options;
+            $availableSizes = $settings->getAvailableTextSizes();
+            $options = [];
+            foreach ($availableSizes as $value => $config) {
+                $options[] = [
+                    'label' => Craft::t('formie', $config['label']),
+                    'value' => $value,
+                ];
             }
+            return $options;
         }
-        
+
         // Fallback to default options if plugin not available
         return [
             ['label' => Craft::t('formie', 'Extra Large'), 'value' => 'textXL'],
@@ -147,12 +145,10 @@ class Paragraph extends CosmeticField
         // Get text size classes from plugin settings (supports custom sizes)
         $plugin = FormieParagraphField::$plugin;
         $textSizeClass = 'text-base'; // fallback
-        
-        if ($plugin) {
+
+        if ($plugin !== null) {
             $settings = $plugin->getSettings();
-            if ($settings) {
-                $textSizeClass = $settings->getTextSizeClasses($this->textSize);
-            }
+            $textSizeClass = $settings->getTextSizeClasses($this->textSize);
         }
         
         // Fallback to hardcoded classes if plugin not available
@@ -172,7 +168,7 @@ class Paragraph extends CosmeticField
             'fui-paragraph',
             'text-brand',
             'block',
-            $textSizeClass
+            $textSizeClass,
         ];
 
         // Add custom CSS classes if set
@@ -283,11 +279,9 @@ class Paragraph extends CosmeticField
             $plugin = FormieParagraphField::$plugin;
             $textSizeClass = 'text-base'; // fallback
             
-            if ($plugin) {
+            if ($plugin !== null) {
                 $settings = $plugin->getSettings();
-                if ($settings) {
-                    $textSizeClass = $settings->getTextSizeClasses($this->textSize);
-                }
+                $textSizeClass = $settings->getTextSizeClasses($this->textSize);
             }
             
             // Fallback to hardcoded classes if plugin not available
@@ -320,9 +314,9 @@ class Paragraph extends CosmeticField
         // Paragraph is a cosmetic field - just show the content in the submission view
         $content = $this->getRenderedParagraphContent();
         
-        return '<div class="fui-paragraph-display" style="padding: 10px; background: #f7f7f7; border-radius: 4px; color: #666;">' . 
+        return '<div class="fui-paragraph-display" style="padding: 10px; background: #f7f7f7; border-radius: 4px; color: #666;">' .
                '<small style="display: block; color: #999; margin-bottom: 5px;">Paragraph Field</small>' .
-               $content . 
+               $content .
                '</div>';
     }
 }
