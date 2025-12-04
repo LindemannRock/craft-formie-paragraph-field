@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.1.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.0.3...v3.1.0) (2025-12-04)
+
+
+### Features
+
+* add nullable paragraphContent property and textSize key to Paragraph field ([00f69a1](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/00f69a161b1c9e06bf61367625f015d0d363db48))
+* add PHPStan and EasyCodingStandard configurations, improve code quality checks ([b8972d4](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/b8972d41a6bcdd956c007f9c45f920f3c422df92))
+
 ## [3.0.3](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.0.2...v3.0.3) (2025-11-01)
 
 
