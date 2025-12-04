@@ -21,6 +21,11 @@ use verbb\formie\helpers\SchemaHelper;
 
 use verbb\formie\models\HtmlTag;
 
+/**
+ * Paragraph Field
+ *
+ * @since 1.0.0
+ */
 class Paragraph extends CosmeticField
 {
     // Static Methods
