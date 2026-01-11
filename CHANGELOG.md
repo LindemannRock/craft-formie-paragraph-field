@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.1.1](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.1.0...v3.1.1) (2026-01-11)
+
+
+### Bug Fixes
+
+* bootstrap the base plugin helper in FormieParagraphField ([7c309d1](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/7c309d148bbac76baaec76c70002ea4c87193366))
+* update composer.json to include craft-plugin-base and refactor Settings model ([d3797bc](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/d3797bc48777101753b3ab4dc6bd1354e9ae389c))
+
+
+### Miscellaneous Chores
+
+* update composer.json to include ECS in require-dev section ([328637f](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/328637fc94edefdb7448fbde3629e03e520d2021))
+
 ## [3.1.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.0.3...v3.1.0) (2025-12-04)
 
 
