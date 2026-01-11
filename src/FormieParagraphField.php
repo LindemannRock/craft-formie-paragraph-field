@@ -15,6 +15,7 @@ use craft\base\Model;
 use craft\base\Plugin;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\web\View;
+use lindemannrock\base\helpers\PluginHelper;
 use lindemannrock\formieparagraphfield\fields\Paragraph;
 use lindemannrock\formieparagraphfield\models\Settings;
 use verbb\formie\events\RegisterFieldsEvent;
@@ -55,6 +56,9 @@ class FormieParagraphField extends Plugin
     {
         parent::init();
         self::$plugin = $this;
+
+        // Bootstrap the base plugin helper
+        PluginHelper::bootstrap($this, 'formieParagraphFieldHelper');
 
         // Set the alias for this plugin
         Craft::setAlias('@lindemannrock/formieparagraphfield', __DIR__);
