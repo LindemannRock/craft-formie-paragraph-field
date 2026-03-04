@@ -7,6 +7,14 @@
 
 {% import "_includes/forms" as forms %}
 
+{% if settings is defined and settings.hasErrors() %}
+    {{ include('lindemannrock-base/_partials/error-summary', {
+        errors: settings.getErrors(),
+        translationCategory: 'formie-paragraph-field',
+        linkMode: 'field-id',
+    }) }}
+{% endif %}
+
 <fieldset style="margin-top: 0;">
 	<h2>{{ 'General Settings'|t('formie-paragraph-field') }}</h2>
 
@@ -18,7 +26,8 @@
         value: settings.pluginName ?? 'Formie Paragraph Field',
         placeholder: 'Formie Paragraph Field',
         warning: settings.isOverriddenByConfig('pluginName') ? 'This is being overridden by the `pluginName` setting in the `config/formie-paragraph-field.php` file.'|t('formie-paragraph-field'),
-        disabled: settings.isOverriddenByConfig('pluginName')
+        disabled: settings.isOverriddenByConfig('pluginName'),
+        errors: settings.getErrors('pluginName')
     }) }}
 </fieldset>
 
@@ -42,7 +51,8 @@
             { value: 'textXL', label: 'Extra Large'|t('formie-paragraph-field') }
         ],
         warning: settings.isOverriddenByConfig('defaultTextSize') ? 'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.'|t('formie-paragraph-field'),
-        disabled: settings.isOverriddenByConfig('defaultTextSize')
+        disabled: settings.isOverriddenByConfig('defaultTextSize'),
+        errors: settings.getErrors('defaultTextSize')
     }) }}
 </fieldset>
 

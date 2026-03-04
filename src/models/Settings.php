@@ -46,6 +46,7 @@ class Settings extends Model
     public function defineRules(): array
     {
         return [
+            [['pluginName'], 'required'],
             [['pluginName', 'defaultTextSize'], 'string'],
             [['customTextSizes'], 'safe'],
             [['defaultTextSize'], 'validateDefaultTextSize'],
