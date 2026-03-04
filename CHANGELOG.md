@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.1.2](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.1.1...v3.1.2) (2026-03-04)
+
+
+### Bug Fixes
+
+* **settings:** require pluginName in settings validation ([480763f](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/480763fae20dd5bc717ff059360f7c33de2c2728))
+
+
+### Miscellaneous Chores
+
+* add .gitattributes with export-ignore for Packagist distribution ([d38b3d4](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/d38b3d45bacb1c91b3aa9aa8ff36456886f0f483))
+* switch to Craft License for commercial release ([45e516b](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/45e516bfae91e5cf532830a8a1ec1fe1405140f4))
+
 ## [3.1.1](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.1.0...v3.1.1) (2026-01-11)
 
 
