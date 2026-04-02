@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.1.2...v3.2.0) (2026-04-02)
+
+
+### Features
+
+* **icon:** add new SVG icons for improved visuals ([dc71a2a](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/dc71a2a9ea1af3e90d36dc6c2c8737515f97bc13))
+
 ## [3.1.2](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.1.1...v3.1.2) (2026-03-04)
 
 
