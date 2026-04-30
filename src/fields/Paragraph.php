@@ -11,6 +11,7 @@ namespace lindemannrock\formieparagraphfield\fields;
 use Craft;
 use craft\base\ElementInterface;
 use craft\helpers\Html;
+use craft\helpers\Json;
 use craft\helpers\Template;
 use GraphQL\Type\Definition\Type;
 
@@ -127,12 +128,12 @@ class Paragraph extends CosmeticField
         // Create JavaScript cases for each size
         $jsCases = [];
         foreach ($sizeMap as $value => $label) {
-            $jsCases[] = "field.settings.textSize === '" . addslashes($value) . "' ? '" . addslashes($label) . "'";
+            $jsCases[] = 'field.settings.textSize === ' . Json::encode($value) . ' ? ' . Json::encode($label);
         }
 
         // Use first available option as fallback instead of hardcoded 'Base'
         $firstOption = !empty($sizeOptions) ? $sizeOptions[0]['label'] : 'Base';
-        $jsCondition = implode(' : ', $jsCases) . " : '" . addslashes($firstOption) . "'";
+        $jsCondition = implode(' : ', $jsCases) . ' : ' . Json::encode($firstOption);
 
         return '<div class="fui-field-input fui-field-paragraph">
             <div style="font-size: 10px; color: #999; margin-bottom: 4px;">
