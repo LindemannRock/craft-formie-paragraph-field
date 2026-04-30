@@ -63,13 +63,7 @@ class FormieParagraphField extends Plugin
         // Set the alias for this plugin
         Craft::setAlias('@lindemannrock/formieparagraphfield', __DIR__);
         Craft::setAlias('@formie-paragraph-templates', __DIR__ . '/templates');
-        
-        // Create class alias for backward compatibility with existing forms
-        class_alias(
-            \lindemannrock\formieparagraphfield\fields\Paragraph::class,
-            'lindemannrock\modules\formieparagraphfield\fields\Paragraph'
-        );
-        
+
         // Register view paths for Formie
         if (Craft::$app->request->getIsSiteRequest()) {
             Event::on(
@@ -95,24 +89,14 @@ class FormieParagraphField extends Plugin
             Fields::EVENT_REGISTER_FIELDS,
             function(RegisterFieldsEvent $event) {
                 $event->fields[] = Paragraph::class;
-                
-                Craft::info(
-                    'Registered Paragraph field for Formie',
-                    __METHOD__
-                );
             }
         );
-        
+
         // Set the plugin name from settings
         $settings = $this->getSettings();
         if (!empty($settings->pluginName)) {
             $this->name = $settings->pluginName;
         }
-
-        Craft::info(
-            'Formie Paragraph Field plugin loaded',
-            __METHOD__
-        );
     }
     
     /**

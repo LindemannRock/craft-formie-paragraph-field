@@ -89,28 +89,18 @@ class Paragraph extends CosmeticField
     private function getTextSizeOptions(): array
     {
         $plugin = FormieParagraphField::$plugin;
-
-        if ($plugin !== null) {
-            $settings = $plugin->getSettings();
-            $availableSizes = $settings->getAvailableTextSizes();
-            $options = [];
-            foreach ($availableSizes as $value => $config) {
-                $options[] = [
-                    'label' => Craft::t('formie', $config['label']),
-                    'value' => $value,
-                ];
-            }
-            return $options;
+        if ($plugin === null) {
+            return [];
         }
 
-        // Fallback to default options if plugin not available
-        return [
-            ['label' => Craft::t('formie', 'Extra Large'), 'value' => 'textXL'],
-            ['label' => Craft::t('formie', 'Large'), 'value' => 'textLG'],
-            ['label' => Craft::t('formie', 'Base'), 'value' => 'textBase'],
-            ['label' => Craft::t('formie', 'Small'), 'value' => 'textSM'],
-            ['label' => Craft::t('formie', 'Extra Small'), 'value' => 'textXS'],
-        ];
+        $options = [];
+        foreach ($plugin->getSettings()->getAvailableTextSizes() as $value => $config) {
+            $options[] = [
+                'label' => Craft::t('formie', $config['label']),
+                'value' => $value,
+            ];
+        }
+        return $options;
     }
 
     public function getPreviewInputHtml(): string
@@ -147,26 +137,10 @@ class Paragraph extends CosmeticField
         // Get the paragraph content and render it through Twig to support translations
         $content = $this->getRenderedParagraphContent();
 
-        // Get text size classes from plugin settings (supports custom sizes)
         $plugin = FormieParagraphField::$plugin;
-        $textSizeClass = 'text-base'; // fallback
-
-        if ($plugin !== null) {
-            $settings = $plugin->getSettings();
-            $textSizeClass = $settings->getTextSizeClasses($this->textSize);
-        }
-        
-        // Fallback to hardcoded classes if plugin not available
-        if ($textSizeClass === 'text-base' && $this->textSize !== 'textBase') {
-            $defaultClasses = [
-                'textXL' => 'text-lg sm:text-xl md:text-2xl',
-                'textLG' => 'text-base sm:text-lg md:text-xl',
-                'textBase' => 'text-base',
-                'textSM' => 'text-sm',
-                'textXS' => 'text-xs',
-            ];
-            $textSizeClass = $defaultClasses[$this->textSize] ?? 'text-base';
-        }
+        $textSizeClass = $plugin !== null
+            ? $plugin->getSettings()->getTextSizeClasses($this->textSize)
+            : 'text-base';
 
         // Build classes array
         $classes = [
@@ -269,28 +243,11 @@ class Paragraph extends CosmeticField
     public function defineHtmlTag(string $key, array $context = []): ?HtmlTag
     {
         if ($key === 'fieldParagraph') {
-            // Get text size classes from plugin settings (supports custom sizes)
             $plugin = FormieParagraphField::$plugin;
-            $textSizeClass = 'text-base'; // fallback
-            
-            if ($plugin !== null) {
-                $settings = $plugin->getSettings();
-                $textSizeClass = $settings->getTextSizeClasses($this->textSize);
-            }
-            
-            // Fallback to hardcoded classes if plugin not available
-            if ($textSizeClass === 'text-base' && $this->textSize !== 'textBase') {
-                $defaultClasses = [
-                    'textXL' => 'text-lg sm:text-xl md:text-2xl',
-                    'textLG' => 'text-base sm:text-lg md:text-xl',
-                    'textBase' => 'text-base',
-                    'textSM' => 'text-sm',
-                    'textXS' => 'text-xs',
-                ];
-                $textSizeClass = $defaultClasses[$this->textSize] ?? 'text-base';
-            }
+            $textSizeClass = $plugin !== null
+                ? $plugin->getSettings()->getTextSizeClasses($this->textSize)
+                : 'text-base';
 
-            // Just add the size class, let Formie's theme config handle the rest
             return new HtmlTag('p', [
                 'class' => $textSizeClass,
             ]);

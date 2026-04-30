@@ -43,13 +43,10 @@
         id: 'defaultTextSize',
         name: 'defaultTextSize',
         value: settings.defaultTextSize ?? 'textBase',
-        options: [
-            { value: 'textXS', label: 'Extra Small'|t('formie-paragraph-field') },
-            { value: 'textSM', label: 'Small'|t('formie-paragraph-field') },
-            { value: 'textBase', label: 'Base'|t('formie-paragraph-field') },
-            { value: 'textLG', label: 'Large'|t('formie-paragraph-field') },
-            { value: 'textXL', label: 'Extra Large'|t('formie-paragraph-field') }
-        ],
+        options: settings.getAvailableTextSizes()|map((config, key) => {
+            value: key,
+            label: config.label|t('formie-paragraph-field')
+        })|values,
         warning: settings.isOverriddenByConfig('defaultTextSize') ? 'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.'|t('formie-paragraph-field'),
         disabled: settings.isOverriddenByConfig('defaultTextSize'),
         errors: settings.getErrors('defaultTextSize')
