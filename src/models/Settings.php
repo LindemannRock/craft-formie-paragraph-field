@@ -62,7 +62,9 @@ class Settings extends Model
         $availableValues = array_keys($availableOptions);
 
         if (!in_array($this->$attribute, $availableValues)) {
-            $this->addError($attribute, 'Default text size must be one of: ' . implode(', ', $availableValues));
+            $this->addError($attribute, Craft::t('formie-paragraph-field', 'Default text size must be one of: {values}', [
+                'values' => implode(', ', $availableValues),
+            ]));
         }
     }
 
