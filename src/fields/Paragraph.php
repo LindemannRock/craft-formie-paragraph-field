@@ -96,7 +96,7 @@ class Paragraph extends CosmeticField
         $options = [];
         foreach ($plugin->getSettings()->getAvailableTextSizes() as $value => $config) {
             $options[] = [
-                'label' => Craft::t('formie', $config['label']),
+                'label' => Craft::t('formie-paragraph-field', $config['label']),
                 'value' => $value,
             ];
         }
@@ -123,12 +123,15 @@ class Paragraph extends CosmeticField
         $firstOption = !empty($sizeOptions) ? $sizeOptions[0]['label'] : 'Base';
         $jsCondition = implode(' : ', $jsCases) . ' : ' . Json::encode($firstOption);
 
+        $sizeLabel = Html::encode(Craft::t('formie-paragraph-field', 'Size:'));
+        $placeholder = Html::encode(Craft::t('formie-paragraph-field', 'Paragraph content will appear here'));
+
         return '<div class="fui-field-input fui-field-paragraph">
             <div style="font-size: 10px; color: #999; margin-bottom: 4px;">
-                Size: ${ ' . $jsCondition . ' }
+                ' . $sizeLabel . ' ${ ' . $jsCondition . ' }
             </div>
             <p v-if="field.settings.paragraphContent" style="color: #666; font-size: 14px; margin: 0; white-space: pre-wrap;">${ field.settings.paragraphContent }</p>
-            <p v-else style="color: #999; font-size: 14px; margin: 0;">Paragraph content will appear here</p>
+            <p v-else style="color: #999; font-size: 14px; margin: 0;">' . $placeholder . '</p>
         </div>';
     }
 
@@ -265,8 +268,10 @@ class Paragraph extends CosmeticField
         // Paragraph is a cosmetic field - just show the content in the submission view
         $content = $this->getRenderedParagraphContent();
         
+        $label = Html::encode(Craft::t('formie-paragraph-field', 'Paragraph Field'));
+
         return '<div class="fui-paragraph-display" style="padding: 10px; background: #f7f7f7; border-radius: 4px; color: #666;">' .
-               '<small style="display: block; color: #999; margin-bottom: 5px;">Paragraph Field</small>' .
+               '<small style="display: block; color: #999; margin-bottom: 5px;">' . $label . '</small>' .
                $content .
                '</div>';
     }
