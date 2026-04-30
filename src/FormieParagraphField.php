@@ -58,7 +58,16 @@ class FormieParagraphField extends Plugin
         self::$plugin = $this;
 
         // Bootstrap the base plugin helper
-        PluginHelper::bootstrap($this, 'formieParagraphFieldHelper');
+        PluginHelper::bootstrap($this, 'formieParagraphFieldHelper', [], [], [
+            'installExperience' => [
+                'headline' => Craft::t('formie-paragraph-field', 'Formie Paragraph Field'),
+                'body' => Craft::t('formie-paragraph-field', 'Configure paragraph fields and manage default text settings from the plugin settings area.'),
+                'ctaLabel' => Craft::t('formie-paragraph-field', 'Open Formie Paragraph Field'),
+                'ctaUrl' => 'settings/plugins/formie-paragraph-field',
+                'redirectUri' => 'settings/plugins/formie-paragraph-field',
+                'confettiPreset' => 'surprise',
+            ],
+        ]);
 
         // Set the alias for this plugin
         Craft::setAlias('@lindemannrock/formieparagraphfield', __DIR__);
