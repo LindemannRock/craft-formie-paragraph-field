@@ -15,12 +15,12 @@
     }) }}
 {% endif %}
 
-<fieldset style="margin-top: 0;">
+<fieldset class="first">
 	<h2>{{ 'General Settings'|t('formie-paragraph-field') }}</h2>
 
 	{{ forms.textField({
         label: 'Plugin Name'|t('formie-paragraph-field'),
-        instructions: 'The public-facing name of the plugin'|t('formie-paragraph-field'),
+        instructions: 'The name of the plugin as it appears in the Control Panel menu'|t('formie-paragraph-field'),
         id: 'pluginName',
         name: 'pluginName',
         value: settings.pluginName ?? 'Formie Paragraph Field',
