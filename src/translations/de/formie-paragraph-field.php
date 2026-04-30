@@ -9,6 +9,8 @@
 return [
     // Plugin meta
     'Formie Paragraph Field' => 'Formie Paragraph Field',
+    'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Konfigurieren Sie Absatz-Felder und verwalten Sie die Standard-Texteinstellungen im Einstellungsbereich des Plugins.',
+    'Open Formie Paragraph Field' => 'Formie Paragraph Field öffnen',
     'Plugin Name' => 'Plugin-Name',
     'The name of the plugin as it appears in the Control Panel menu' => 'Der Name des Plugins, wie er im Control-Panel-Menü erscheint',
 

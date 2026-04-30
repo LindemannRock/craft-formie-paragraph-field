@@ -9,6 +9,8 @@
 return [
     // Plugin meta
     'Formie Paragraph Field' => 'Formie Paragraph Field',
+    'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Configureer alineavelden en beheer standaard tekstinstellingen vanuit het instellingengebied van de plugin.',
+    'Open Formie Paragraph Field' => 'Formie Paragraph Field openen',
     'Plugin Name' => 'Pluginnaam',
     'The name of the plugin as it appears in the Control Panel menu' => 'De naam van de plugin zoals deze verschijnt in het configuratiescherm menu',
 
