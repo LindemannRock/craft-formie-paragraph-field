@@ -10,6 +10,7 @@ namespace lindemannrock\formieparagraphfield\fields;
 
 use Craft;
 use craft\base\ElementInterface;
+use craft\helpers\Html;
 use craft\helpers\Template;
 use GraphQL\Type\Definition\Type;
 
@@ -191,22 +192,11 @@ class Paragraph extends CosmeticField
     {
         $content = trim($this->paragraphContent ?? '');
 
-        if ($content) {
-            // Check if content contains Twig syntax
-            if (strpos($content, '{{') !== false || strpos($content, '{%') !== false) {
-                // Content has Twig, render it as-is
-                $variables = $this->getRenderOptions();
-                $content = Craft::$app->getView()->renderString($content, $variables);
-            } else {
-                // Plain text content - automatically translate it
-                $content = Craft::t('formie', $content);
-            }
-
-            // Convert line breaks to <br> tags after rendering
-            $content = nl2br($content);
+        if ($content === '') {
+            return '';
         }
 
-        return $content;
+        return nl2br(Html::encode(Craft::t('formie', $content)));
     }
     
     /**
