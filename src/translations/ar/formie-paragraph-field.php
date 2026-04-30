@@ -12,6 +12,12 @@ return [
     'Plugin Name' => 'اسم الإضافة',
     'The name of the plugin as it appears in the Control Panel menu' => 'اسم الإضافة كما يظهر في قائمة لوحة التحكم',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'اختر حجم نص الفقرة.',
+    'Paragraph Content' => 'محتوى الفقرة',
+    'Text Size' => 'حجم النص',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'المحتوى المراد عرضه. سيتم تحويل فواصل الأسطر إلى وسوم <br>.',
+
     // Common
     'Base' => 'أساسي',
     'Extra Large' => 'كبير جداً',

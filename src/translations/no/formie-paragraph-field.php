@@ -12,6 +12,12 @@ return [
     'Plugin Name' => 'Plugin-navn',
     'The name of the plugin as it appears in the Control Panel menu' => 'Navnet på plugin-en slik det vises i kontrollpanelets meny',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'Velg størrelsen på avsnittsteksten.',
+    'Paragraph Content' => 'Avsnittinnhold',
+    'Text Size' => 'Tekststørrelse',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Innholdet som skal vises. Linjeskift konverteres til <br>-tagger.',
+
     // Common
     'Base' => 'Standard',
     'Extra Large' => 'Ekstra stor',

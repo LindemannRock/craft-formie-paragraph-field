@@ -12,6 +12,12 @@ return [
     'Plugin Name' => 'Nome do plugin',
     'The name of the plugin as it appears in the Control Panel menu' => 'O nome do plugin tal como aparece no menu do painel de controlo',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'Escolha o tamanho para o texto do parágrafo.',
+    'Paragraph Content' => 'Conteúdo do parágrafo',
+    'Text Size' => 'Tamanho do texto',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'O conteúdo a ser exibido. As quebras de linha serão convertidas em tags <br>.',
+
     // Common
     'Base' => 'Base',
     'Extra Large' => 'Extra grande',

@@ -12,6 +12,12 @@ return [
     'Plugin Name' => 'プラグイン名',
     'The name of the plugin as it appears in the Control Panel menu' => 'コントロールパネルのメニューに表示されるプラグインの名前',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => '段落テキストのサイズを選択してください。',
+    'Paragraph Content' => '段落コンテンツ',
+    'Text Size' => 'テキストサイズ',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => '表示するコンテンツです。改行は <br> タグに変換されます。',
+
     // Common
     'Base' => '標準',
     'Extra Large' => '特大',

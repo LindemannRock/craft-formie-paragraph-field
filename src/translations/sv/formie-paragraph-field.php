@@ -12,6 +12,12 @@ return [
     'Plugin Name' => 'Plugin-namn',
     'The name of the plugin as it appears in the Control Panel menu' => 'Namnet på pluginen så som det visas i kontrollpanelens meny',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'Välj storlek för stycketexten.',
+    'Paragraph Content' => 'Styckeinnehåll',
+    'Text Size' => 'Textstorlek',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Innehållet som ska visas. Radbrytningar konverteras till <br>-taggar.',
+
     // Common
     'Base' => 'Standard',
     'Extra Large' => 'Extra stor',
