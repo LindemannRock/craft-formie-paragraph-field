@@ -55,7 +55,7 @@ class Paragraph extends CosmeticField
     // =========================================================================
 
     /**
-     * @var string|null Paragraph content (supports Twig)
+     * @var string|null Plain-text paragraph content. Line breaks are converted to <br> tags; HTML is escaped.
      */
     public ?string $paragraphContent = null;
 

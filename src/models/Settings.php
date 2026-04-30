@@ -118,11 +118,14 @@ class Settings extends Model
 
     /**
      * Get text size classes for a given size value
-     * @param string $size
+     * @param string|null $size
      * @return string
      */
-    public function getTextSizeClasses(string $size): string
+    public function getTextSizeClasses(?string $size): string
     {
+        if ($size === null) {
+            return 'text-base';
+        }
         $availableSizes = $this->getAvailableTextSizes();
         return $availableSizes[$size]['classes'] ?? 'text-base';
     }
