@@ -60,9 +60,9 @@ class Paragraph extends CosmeticField
     public ?string $paragraphContent = null;
 
     /**
-     * @var string Text size key (e.g., textBase, textLG, custom)
+     * @var string|null Text size key (e.g., textBase, textLG, custom). Null means "inherit plugin default".
      */
-    public string $textSize = 'textBase';
+    public ?string $textSize = null;
 
     // Public Methods
     // =========================================================================
@@ -73,15 +73,13 @@ class Paragraph extends CosmeticField
     public function init(): void
     {
         parent::init();
-        
-        // Get plugin settings and apply defaults if properties are not set or are default
-        $plugin = FormieParagraphField::$plugin;
-        if ($plugin !== null && $this->textSize === 'textBase') {
-            $settings = $plugin->getSettings();
-            if ($settings->defaultTextSize) {
-                $this->textSize = $settings->defaultTextSize;
-            }
+
+        if ($this->textSize !== null) {
+            return;
         }
+
+        $default = FormieParagraphField::$plugin?->getSettings()->defaultTextSize;
+        $this->textSize = $default ?: 'textBase';
     }
     
     /**
