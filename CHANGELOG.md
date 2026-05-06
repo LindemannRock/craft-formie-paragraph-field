@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.3.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.2.0...v3.3.0) (2026-05-06)
+
+
+### Features
+
+* add issue templates for bug reports, feature requests, and questions ([412b865](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/412b8656b7a6814faba31b50a572ed6b3772ce86))
+* **plugin:** enhance installation experience with configuration options ([13442cc](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/13442cc7ed7235324c34da11ca6f8612b9bea896))
+* **translations:** add multiple language support for paragraph field ([9a6d0e5](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/9a6d0e5514e6703925b50ec365592089e6e951a1))
+* **translations:** add new keys for paragraph field in multiple languages ([a98e1f7](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/a98e1f783566bf1eae87fac4f25e5f6cb0ebd2b0))
+* **translations:** add new keys for paragraph field in multiple languages ([460b613](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/460b61373dd82970f3b9270c630423ad75b305e9))
+
+
+### Bug Fixes
+
+* drop PAT requirement for release-please — use built-in GITHUB_TOKEN ([7f5aa1d](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/7f5aa1da4ddb86e280f7f644fbb5920c671c75d5))
+* **paragraph:** clarify paragraph content description and handle null text size ([314a753](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/314a75397469aa50b27776c67f2c958898561f1a))
+* **paragraph:** improve rendering of paragraph content with HTML encoding ([93a025a](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/93a025ac7a7a9c174a509a29684f12972fd09dcd))
+* **paragraph:** update labels and help texts to use plugin-specific translations ([dac5ef3](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/dac5ef3934fe63fc4ee3edb6efd1fb1412c13090))
+* **paragraph:** update text size handling in JavaScript cases ([dbb7f25](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/dbb7f25a6e39f26232b831ec9d39dac98f3153ea))
+* **paragraph:** update text size handling to allow null inheritance ([80296e3](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/80296e3b8f861492722f227dbf69386d5dbd7ce3))
+* **settings:** improve error message for invalid default text size ([7533247](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/75332473d9b88c3e7e4ed687100cacfcfcd377cd))
+* **settings:** update plugin name instructions for clarity ([5d110fd](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/5d110fd14f811ec3b048e431372babeb57692828))
+
 ## [3.2.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.1.2...v3.2.0) (2026-04-02)
 
 
