@@ -47,6 +47,10 @@
 		"phpstan": "phpstan --ansi --memory-limit=1G",
 		"check-cs": "ecs check --ansi",
 		"fix-cs": "ecs check --fix --ansi",
+		"ci": [
+			"@phpstan",
+			"@check-cs"
+		],
 		"install-hooks": "git config core.hooksPath .githooks 2>/dev/null || true",
 		"post-install-cmd": "@install-hooks",
 		"post-update-cmd": "@install-hooks"
