@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.4.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.3.0...v3.4.0) (2026-05-22)
+
+
+### Added
+
+* add pre-commit hook for ECS and PHPStan code quality checks ([6bfba5c](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/6bfba5cca6145c105b038cf541cd69d48a00378e))
+* **i18n:** add translation issue template for reporting language problems ([3bbccad](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/3bbccad7e2bcfc32fcf2c949f1fd718e7095759c))
+
 ## [3.3.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.2.0...v3.3.0) (2026-05-06)
 
 
