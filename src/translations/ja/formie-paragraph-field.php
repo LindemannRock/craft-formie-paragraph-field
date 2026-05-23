@@ -11,8 +11,6 @@ return [
     'Formie Paragraph Field' => 'Formie Paragraph Field',
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'プラグインの設定エリアから段落フィールドを設定し、デフォルトのテキスト設定を管理します。',
     'Open Formie Paragraph Field' => 'Formie Paragraph Field を開く',
-    'Plugin Name' => 'プラグイン名',
-    'The name of the plugin as it appears in the Control Panel menu' => 'コントロールパネルのメニューに表示されるプラグインの名前',
 
     // Field schema (form builder)
     'Choose the size for the paragraph text.' => '段落テキストのサイズを選択してください。',

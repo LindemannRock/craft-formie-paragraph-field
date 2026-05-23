@@ -11,8 +11,6 @@ return [
     'Formie Paragraph Field' => 'Formie Paragraph Field',
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Configure los campos de párrafo y gestione los ajustes de texto predeterminados desde el área de configuración del plugin.',
     'Open Formie Paragraph Field' => 'Abrir Formie Paragraph Field',
-    'Plugin Name' => 'Nombre del plugin',
-    'The name of the plugin as it appears in the Control Panel menu' => 'El nombre del plugin tal como aparece en el menú del panel de control',
 
     // Field schema (form builder)
     'Choose the size for the paragraph text.' => 'Elija el tamaño para el texto del párrafo.',

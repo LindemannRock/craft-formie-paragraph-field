@@ -11,8 +11,6 @@ return [
     'Formie Paragraph Field' => 'Formie Paragraph Field',
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'قم بتهيئة حقول الفقرة وإدارة إعدادات النص الافتراضية من منطقة إعدادات الإضافة.',
     'Open Formie Paragraph Field' => 'فتح Formie Paragraph Field',
-    'Plugin Name' => 'اسم الإضافة',
-    'The name of the plugin as it appears in the Control Panel menu' => 'اسم الإضافة كما يظهر في قائمة لوحة التحكم',
 
     // Field schema (form builder)
     'Choose the size for the paragraph text.' => 'اختر حجم نص الفقرة.',
