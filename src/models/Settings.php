@@ -10,6 +10,7 @@ namespace lindemannrock\formieparagraphfield\models;
 
 use Craft;
 use craft\base\Model;
+use lindemannrock\base\traits\PluginNameSettingsTrait;
 use lindemannrock\base\traits\SettingsConfigTrait;
 use lindemannrock\base\traits\SettingsDisplayNameTrait;
 
@@ -22,6 +23,7 @@ use lindemannrock\base\traits\SettingsDisplayNameTrait;
  */
 class Settings extends Model
 {
+    use PluginNameSettingsTrait;
     use SettingsConfigTrait;
     use SettingsDisplayNameTrait;
     /**
@@ -45,12 +47,11 @@ class Settings extends Model
      */
     public function defineRules(): array
     {
-        return [
-            [['pluginName'], 'required'],
-            [['pluginName', 'defaultTextSize'], 'string'],
+        return array_merge([
+            [['defaultTextSize'], 'string'],
             [['customTextSizes'], 'safe'],
             [['defaultTextSize'], 'validateDefaultTextSize'],
-        ];
+        ], $this->pluginNameSettingsRules());
     }
 
     /**
@@ -73,11 +74,10 @@ class Settings extends Model
      */
     public function attributeLabels(): array
     {
-        return [
-            'pluginName' => Craft::t('formie-paragraph-field', 'Plugin Name'),
+        return array_merge([
             'defaultTextSize' => Craft::t('formie-paragraph-field', 'Default Text Size'),
             'customTextSizes' => Craft::t('formie-paragraph-field', 'Custom Text Sizes'),
-        ];
+        ], $this->pluginNameSettingsLabel());
     }
 
     /**
