@@ -33,7 +33,6 @@ return [
 
     // Settings: General
     'General Settings' => 'Paramètres généraux',
-    'This is being overridden by the `pluginName` setting in the `config/formie-paragraph-field.php` file.' => 'Ce paramètre est remplacé par le paramètre `pluginName` dans le fichier `config/formie-paragraph-field.php`.',
 
     // Settings: Default Field Settings
     'Custom Text Sizes' => 'Tailles de texte personnalisées',
