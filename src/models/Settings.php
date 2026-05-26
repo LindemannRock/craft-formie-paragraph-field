@@ -94,23 +94,23 @@ class Settings extends Model
         // Otherwise use default sizes
         return [
             'textXS' => [
-                'label' => 'Extra Small',
+                'label' => Craft::t('formie-paragraph-field', 'Extra Small'),
                 'classes' => 'text-xs',
             ],
             'textSM' => [
-                'label' => 'Small',
+                'label' => Craft::t('formie-paragraph-field', 'Small'),
                 'classes' => 'text-sm',
             ],
             'textBase' => [
-                'label' => 'Base',
+                'label' => Craft::t('formie-paragraph-field', 'Base'),
                 'classes' => 'text-base',
             ],
             'textLG' => [
-                'label' => 'Large',
+                'label' => Craft::t('formie-paragraph-field', 'Large'),
                 'classes' => 'text-base sm:text-lg md:text-xl',
             ],
             'textXL' => [
-                'label' => 'Extra Large',
+                'label' => Craft::t('formie-paragraph-field', 'Extra Large'),
                 'classes' => 'text-lg sm:text-xl md:text-2xl',
             ],
         ];
