@@ -12,12 +12,6 @@ return [
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Configurez les champs paragraphe et gérez les paramètres de texte par défaut depuis la zone des paramètres du plugin.',
     'Open Formie Paragraph Field' => 'Ouvrir Formie Paragraph Field',
 
-    // Field schema (form builder)
-    'Choose the size for the paragraph text.' => 'Choisissez la taille du texte du paragraphe.',
-    'Paragraph Content' => 'Contenu du paragraphe',
-    'Text Size' => 'Taille du texte',
-    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Le contenu à afficher. Les sauts de ligne seront convertis en balises <br>.',
-
     // Common
     'Base' => 'Base',
     'Extra Large' => 'Très grand',
@@ -41,7 +35,12 @@ return [
     'The default text size for new paragraph fields' => 'La taille de texte par défaut pour les nouveaux champs paragraphe',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Ces paramètres seront utilisés comme valeurs par défaut lors de la création de nouveaux champs paragraphe.',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'Choisissez la taille du texte du paragraphe.',
+    'Paragraph Content' => 'Contenu du paragraphe',
+    'Text Size' => 'Taille du texte',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Le contenu à afficher. Les sauts de ligne seront convertis en balises <br>.',
+
     // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Ce paramètre est remplacé par le paramètre `defaultTextSize` dans le fichier `config/formie-paragraph-field.php`.',
-
 ];

@@ -12,12 +12,6 @@ return [
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Konfigurera styckefält och hantera standardinställningar för text från pluginens inställningsområde.',
     'Open Formie Paragraph Field' => 'Öppna Formie Paragraph Field',
 
-    // Field schema (form builder)
-    'Choose the size for the paragraph text.' => 'Välj storlek för stycketexten.',
-    'Paragraph Content' => 'Styckeinnehåll',
-    'Text Size' => 'Textstorlek',
-    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Innehållet som ska visas. Radbrytningar konverteras till <br>-taggar.',
-
     // Common
     'Base' => 'Standard',
     'Extra Large' => 'Extra stor',
@@ -41,7 +35,12 @@ return [
     'The default text size for new paragraph fields' => 'Standardtextstorleken för nya styckefält',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Dessa inställningar kommer att användas som standardvärden när nya styckefält skapas.',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'Välj storlek för stycketexten.',
+    'Paragraph Content' => 'Styckeinnehåll',
+    'Text Size' => 'Textstorlek',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Innehållet som ska visas. Radbrytningar konverteras till <br>-taggar.',
+
     // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Detta åsidosätts av inställningen `defaultTextSize` i filen `config/formie-paragraph-field.php`.',
-
 ];

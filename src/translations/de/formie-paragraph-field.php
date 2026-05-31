@@ -12,12 +12,6 @@ return [
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Konfigurieren Sie Absatz-Felder und verwalten Sie die Standard-Texteinstellungen im Einstellungsbereich des Plugins.',
     'Open Formie Paragraph Field' => 'Formie Paragraph Field öffnen',
 
-    // Field schema (form builder)
-    'Choose the size for the paragraph text.' => 'Wählen Sie die Größe für den Absatztext.',
-    'Paragraph Content' => 'Absatzinhalt',
-    'Text Size' => 'Textgröße',
-    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Der anzuzeigende Inhalt. Zeilenumbrüche werden in <br>-Tags umgewandelt.',
-
     // Common
     'Base' => 'Standard',
     'Extra Large' => 'Extra Groß',
@@ -41,7 +35,12 @@ return [
     'The default text size for new paragraph fields' => 'Die Standard-Textgröße für neue Absatz-Felder',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Diese Einstellungen werden als Standardwerte beim Erstellen neuer Absatz-Felder verwendet.',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'Wählen Sie die Größe für den Absatztext.',
+    'Paragraph Content' => 'Absatzinhalt',
+    'Text Size' => 'Textgröße',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Der anzuzeigende Inhalt. Zeilenumbrüche werden in <br>-Tags umgewandelt.',
+
     // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Dies wird durch die Einstellung `defaultTextSize` in der Datei `config/formie-paragraph-field.php` überschrieben.',
-
 ];

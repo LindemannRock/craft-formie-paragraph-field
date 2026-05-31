@@ -12,12 +12,6 @@ return [
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Konfigurer afsnitsfelter og administrer standardindstillinger for tekst fra pluginens indstillingsområde.',
     'Open Formie Paragraph Field' => 'Åbn Formie Paragraph Field',
 
-    // Field schema (form builder)
-    'Choose the size for the paragraph text.' => 'Vælg størrelsen på afsnitsteksten.',
-    'Paragraph Content' => 'Afsnitsindhold',
-    'Text Size' => 'Tekststørrelse',
-    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Det indhold, der skal vises. Linjeskift konverteres til <br>-tags.',
-
     // Common
     'Base' => 'Standard',
     'Extra Large' => 'Ekstra stor',
@@ -41,7 +35,12 @@ return [
     'The default text size for new paragraph fields' => 'Standardtekststørrelsen for nye afsnitsfelter',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Disse indstillinger bruges som standardværdier, når der oprettes nye afsnitsfelter.',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'Vælg størrelsen på afsnitsteksten.',
+    'Paragraph Content' => 'Afsnitsindhold',
+    'Text Size' => 'Tekststørrelse',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'Det indhold, der skal vises. Linjeskift konverteres til <br>-tags.',
+
     // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Dette tilsidesættes af indstillingen `defaultTextSize` i filen `config/formie-paragraph-field.php`.',
-
 ];

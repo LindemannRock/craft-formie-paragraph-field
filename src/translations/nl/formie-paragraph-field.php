@@ -12,12 +12,6 @@ return [
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Configureer alineavelden en beheer standaard tekstinstellingen vanuit het instellingengebied van de plugin.',
     'Open Formie Paragraph Field' => 'Formie Paragraph Field openen',
 
-    // Field schema (form builder)
-    'Choose the size for the paragraph text.' => 'Kies de grootte voor de alineatekst.',
-    'Paragraph Content' => 'Alinea-inhoud',
-    'Text Size' => 'Tekstgrootte',
-    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'De weer te geven inhoud. Regeleinden worden omgezet naar <br>-tags.',
-
     // Common
     'Base' => 'Basis',
     'Extra Large' => 'Extra groot',
@@ -41,7 +35,12 @@ return [
     'The default text size for new paragraph fields' => 'De standaard tekstgrootte voor nieuwe alineavelden',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Deze instellingen worden gebruikt als standaardwaarden bij het aanmaken van nieuwe alineavelden.',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => 'Kies de grootte voor de alineatekst.',
+    'Paragraph Content' => 'Alinea-inhoud',
+    'Text Size' => 'Tekstgrootte',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => 'De weer te geven inhoud. Regeleinden worden omgezet naar <br>-tags.',
+
     // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Dit wordt overschreven door de instelling `defaultTextSize` in het bestand `config/formie-paragraph-field.php`.',
-
 ];

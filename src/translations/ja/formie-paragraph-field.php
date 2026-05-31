@@ -12,12 +12,6 @@ return [
     'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'プラグインの設定エリアから段落フィールドを設定し、デフォルトのテキスト設定を管理します。',
     'Open Formie Paragraph Field' => 'Formie Paragraph Field を開く',
 
-    // Field schema (form builder)
-    'Choose the size for the paragraph text.' => '段落テキストのサイズを選択してください。',
-    'Paragraph Content' => '段落コンテンツ',
-    'Text Size' => 'テキストサイズ',
-    'The content to be displayed. Line breaks will be converted to <br> tags.' => '表示するコンテンツです。改行は <br> タグに変換されます。',
-
     // Common
     'Base' => '標準',
     'Extra Large' => '特大',
@@ -41,7 +35,12 @@ return [
     'The default text size for new paragraph fields' => '新しい段落フィールドのデフォルトテキストサイズ',
     'These settings will be used as defaults when creating new paragraph fields.' => 'これらの設定は、新しい段落フィールドを作成する際のデフォルト値として使用されます。',
 
+    // Field schema (form builder)
+    'Choose the size for the paragraph text.' => '段落テキストのサイズを選択してください。',
+    'Paragraph Content' => '段落コンテンツ',
+    'Text Size' => 'テキストサイズ',
+    'The content to be displayed. Line breaks will be converted to <br> tags.' => '表示するコンテンツです。改行は <br> タグに変換されます。',
+
     // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => '`config/formie-paragraph-field.php` ファイルの `defaultTextSize` 設定によってオーバーライドされています。',
-
 ];
