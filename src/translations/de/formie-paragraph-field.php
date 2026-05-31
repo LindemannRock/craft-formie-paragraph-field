@@ -40,5 +40,8 @@ return [
     'Default Text Size' => 'Standard-Textgröße',
     'The default text size for new paragraph fields' => 'Die Standard-Textgröße für neue Absatz-Felder',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Diese Einstellungen werden als Standardwerte beim Erstellen neuer Absatz-Felder verwendet.',
+
+    // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Dies wird durch die Einstellung `defaultTextSize` in der Datei `config/formie-paragraph-field.php` überschrieben.',
+
 ];

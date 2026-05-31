@@ -40,5 +40,8 @@ return [
     'Default Text Size' => 'Standard tekststørrelse',
     'The default text size for new paragraph fields' => 'Standard tekststørrelse for nye avsnittsfelt',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Disse innstillingene vil bli brukt som standardverdier ved oppretting av nye avsnittsfelt.',
+
+    // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Dette overstyres av innstillingen `defaultTextSize` i filen `config/formie-paragraph-field.php`.',
+
 ];

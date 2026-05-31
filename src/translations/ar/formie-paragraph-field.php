@@ -40,5 +40,8 @@ return [
     'Default Text Size' => 'حجم النص الافتراضي',
     'The default text size for new paragraph fields' => 'حجم النص الافتراضي لحقول الفقرة الجديدة',
     'These settings will be used as defaults when creating new paragraph fields.' => 'ستُستخدم هذه الإعدادات كقيم افتراضية عند إنشاء حقول فقرة جديدة.',
+
+    // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'يتم تجاوز هذا الإعداد بواسطة الإعداد `defaultTextSize` في ملف `config/formie-paragraph-field.php`.',
+
 ];

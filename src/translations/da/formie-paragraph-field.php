@@ -40,5 +40,8 @@ return [
     'Default Text Size' => 'Standardtekststørrelse',
     'The default text size for new paragraph fields' => 'Standardtekststørrelsen for nye afsnitsfelter',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Disse indstillinger bruges som standardværdier, når der oprettes nye afsnitsfelter.',
+
+    // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Dette tilsidesættes af indstillingen `defaultTextSize` i filen `config/formie-paragraph-field.php`.',
+
 ];

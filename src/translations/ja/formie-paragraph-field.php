@@ -40,5 +40,8 @@ return [
     'Default Text Size' => 'デフォルトテキストサイズ',
     'The default text size for new paragraph fields' => '新しい段落フィールドのデフォルトテキストサイズ',
     'These settings will be used as defaults when creating new paragraph fields.' => 'これらの設定は、新しい段落フィールドを作成する際のデフォルト値として使用されます。',
+
+    // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => '`config/formie-paragraph-field.php` ファイルの `defaultTextSize` 設定によってオーバーライドされています。',
+
 ];

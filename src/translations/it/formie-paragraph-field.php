@@ -40,5 +40,8 @@ return [
     'Default Text Size' => 'Dimensione testo predefinita',
     'The default text size for new paragraph fields' => 'La dimensione del testo predefinita per i nuovi campi paragrafo',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Queste impostazioni verranno utilizzate come valori predefiniti durante la creazione di nuovi campi paragrafo.',
+
+    // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Questa impostazione viene sovrascritta dall\'impostazione `defaultTextSize` nel file `config/formie-paragraph-field.php`.',
+
 ];

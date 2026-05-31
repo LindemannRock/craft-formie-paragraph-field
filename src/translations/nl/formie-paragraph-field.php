@@ -40,5 +40,8 @@ return [
     'Default Text Size' => 'Standaard tekstgrootte',
     'The default text size for new paragraph fields' => 'De standaard tekstgrootte voor nieuwe alineavelden',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Deze instellingen worden gebruikt als standaardwaarden bij het aanmaken van nieuwe alineavelden.',
+
+    // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Dit wordt overschreven door de instelling `defaultTextSize` in het bestand `config/formie-paragraph-field.php`.',
+
 ];

@@ -40,5 +40,8 @@ return [
     'Default Text Size' => 'Standardtextstorlek',
     'The default text size for new paragraph fields' => 'Standardtextstorleken för nya styckefält',
     'These settings will be used as defaults when creating new paragraph fields.' => 'Dessa inställningar kommer att användas som standardvärden när nya styckefält skapas.',
+
+    // Config overrides
     'This is being overridden by the `defaultTextSize` setting in the `config/formie-paragraph-field.php` file.' => 'Detta åsidosätts av inställningen `defaultTextSize` i filen `config/formie-paragraph-field.php`.',
+
 ];
