@@ -81,6 +81,8 @@ In the Control Panel, go to Settings → Plugins and click "Install" for Formie 
 Navigate to **Settings → Plugins → Formie Paragraph Field** to configure:
 - **Default Text Size**: Set the default size for new paragraph fields
 
+Invalid setting values are shown inline and are not saved.
+
 ### Config File
 
 Create a `config/formie-paragraph-field.php` file to override default settings:

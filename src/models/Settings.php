@@ -10,6 +10,7 @@ namespace lindemannrock\formieparagraphfield\models;
 
 use Craft;
 use craft\base\Model;
+use lindemannrock\base\helpers\SettingsPostHelper;
 use lindemannrock\base\traits\PluginNameSettingsTrait;
 use lindemannrock\base\traits\SettingsConfigTrait;
 use lindemannrock\base\traits\SettingsDisplayNameTrait;
@@ -26,6 +27,11 @@ class Settings extends Model
     use PluginNameSettingsTrait;
     use SettingsConfigTrait;
     use SettingsDisplayNameTrait;
+
+    /**
+     * @var array<string, array<int, string>>
+     */
+    private array $settingsPostErrors = [];
     /**
      * @var string The name of the plugin as it appears in the Control Panel menu
      */
@@ -41,6 +47,53 @@ class Settings extends Model
      * Format: ['value' => 'label', 'classes' => 'tailwind classes']
      */
     public array $customTextSizes = [];
+
+    /**
+     * @inheritdoc
+     */
+    public function setAttributes($values, $safeOnly = true): void
+    {
+        if (!is_array($values)) {
+            parent::setAttributes($values, $safeOnly);
+            return;
+        }
+
+        $this->settingsPostErrors = [];
+
+        $result = SettingsPostHelper::apply(
+            model: $this,
+            postedValues: $values,
+            allowedAttributes: $this->settingsPostAttributes(),
+            isOverridden: fn(string $attribute): bool => $this->isOverriddenByConfig($attribute),
+        );
+
+        if ($result->hasErrors) {
+            $this->settingsPostErrors = $this->getErrors();
+        }
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function beforeValidate(): bool
+    {
+        if (!parent::beforeValidate()) {
+            return false;
+        }
+
+        if ($this->settingsPostErrors !== []) {
+            foreach ($this->settingsPostErrors as $attribute => $errors) {
+                foreach ($errors as $error) {
+                    $this->addError($attribute, $error);
+                }
+            }
+
+            $this->settingsPostErrors = [];
+            return false;
+        }
+
+        return true;
+    }
 
     /**
      * @inheritdoc
@@ -136,5 +189,17 @@ class Settings extends Model
     protected static function pluginHandle(): string
     {
         return 'formie-paragraph-field';
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    private function settingsPostAttributes(): array
+    {
+        return [
+            'pluginName',
+            'defaultTextSize',
+            'customTextSizes',
+        ];
     }
 }
