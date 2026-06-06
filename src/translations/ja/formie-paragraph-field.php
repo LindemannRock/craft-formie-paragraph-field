@@ -19,7 +19,7 @@ return [
     'Large' => '大',
     'Paragraph Field' => '段落フィールド',
     'Paragraph content will appear here' => '段落のコンテンツがここに表示されます',
-    'Size:' => 'サイズ:',
+    'Size:' => 'サイズ :',
     'Small' => '小',
 
     // Validation messages
