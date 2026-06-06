@@ -14,8 +14,8 @@ return [
 
     // Common
     'Base' => 'Standard',
-    'Extra Large' => 'Extra Groß',
-    'Extra Small' => 'Extra Klein',
+    'Extra Large' => 'Extra groß',
+    'Extra Small' => 'Extra klein',
     'Large' => 'Groß',
     'Paragraph Field' => 'Absatz-Feld',
     'Paragraph content will appear here' => 'Absatzinhalt wird hier angezeigt',
