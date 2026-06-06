@@ -159,7 +159,7 @@ class Paragraph extends CosmeticField
         }
 
         // Return the paragraph with proper classes
-        $html = '<p class="' . implode(' ', $classes) . '">' . $content . '</p>';
+        $html = '<p class="' . Html::encode(implode(' ', $classes)) . '">' . $content . '</p>';
 
         return Template::raw($html);
     }
