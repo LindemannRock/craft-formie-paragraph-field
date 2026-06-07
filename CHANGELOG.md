@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.5.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.4.0...v3.5.0) - 2026-06-07
+
+
+### Added
+
+* add static analysis script for CI workflow ([c9bb578](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/c9bb57815f176311d951e2355f5dd1a67ff69b6c))
+* **i18n:** add override message for default text size setting ([27d83a5](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/27d83a52c560e8c7dc3c44cee8fa7ff28ec57232))
+
+
+### Fixed
+
+* **i18n:** correct capitalization of text size labels in German translation ([54bd446](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/54bd446c72b18be560264d06e09e6847b6eaa3f7))
+* **i18n:** correct punctuation in Japanese translation strings ([04f931c](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/04f931c7bfe12f3dc822b2f1f18a42625b7367f8))
+* **paragraph:** escape HTML in rendered paragraph content ([1f96d36](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/1f96d365360133eb3492e8feb4caa3043c47e204))
+
 ## [3.4.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.3.0...v3.4.0) - 2026-05-22
 
 
