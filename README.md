@@ -1,4 +1,6 @@
-# Formie Paragraph Field Plugin
+![Formie Paragraph Field](docs/images/hero.webp)
+
+# Formie Paragraph Field for Craft CMS
 
 [![Latest Version](https://img.shields.io/packagist/v/lindemannrock/craft-formie-paragraph-field.svg)](https://packagist.org/packages/lindemannrock/craft-formie-paragraph-field)
 [![Craft CMS](https://img.shields.io/badge/Craft%20CMS-5.0+-orange.svg)](https://craftcms.com/)
@@ -6,7 +8,7 @@
 [![PHP](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net/)
 [![License](https://img.shields.io/packagist/l/lindemannrock/craft-formie-paragraph-field.svg)](LICENSE)
 
-A Craft CMS plugin that provides a paragraph field type for Verbb's Formie form builder, allowing styled paragraph content with configurable text sizes and Twig template support.
+A Craft CMS plugin that adds a display-only **Paragraph** field type to Verbb's Formie — static text content (intros, instructions, notices) with configurable text sizes.
 
 ## License
 
@@ -16,51 +18,35 @@ This is a commercial plugin licensed under the [Craft License](https://craftcms.
 
 This plugin is in active development and not yet available on the Craft Plugin Store. Features and APIs may change before the initial public release.
 
+## Features
+
+- **Display-only paragraph field** — add static text to a form; it's cosmetic, so it collects no submission value
+- **Configurable text sizes** — 5 built-in sizes, or define your own that map to any CSS classes (Tailwind, Bootstrap, custom)
+- **Default text size** — set the starting size for new fields in plugin settings or config
+- **Safe content** — line breaks become `<br>`, HTML is escaped, and the text passes through Craft's translation layer
+- **Email inclusion** — optionally render the paragraph in Formie notification emails
+- **Conditions** — show or hide the paragraph based on other fields (Formie native)
+- **12 languages** — translated out of the box
+
 ## Requirements
 
 - Craft CMS 5.0 or greater
 - PHP 8.2 or greater
 - Formie 3.0 or greater
 
-## Features
-
-### Flexible Text Sizing
-- **5 Built-in Sizes**: From Extra Small to Extra Large with responsive design
-- **Configurable Options**: Add custom text sizes via config file
-- **Plugin Settings**: Set default text size for new paragraph fields
-
-### Rich Content Support
-- **Twig Rendering**: Content supports translations, variables, and filters
-- **Multi-line Content**: Rich paragraph content with proper formatting
-- **Translation Ready**: Works seamlessly with Craft's translation system
-
-### Seamless Integration
-- Native Formie field type
-- Inherits site's paragraph styling
-- Responsive design out of the box
-- Backward compatible with existing forms
-
 ## Installation
 
 ### Via Composer
-
-```bash
-cd /path/to/project
-```
 
 ```bash
 composer require lindemannrock/craft-formie-paragraph-field
 ```
 
 ```bash
-./craft plugin/install formie-paragraph-field
+php craft plugin/install formie-paragraph-field
 ```
 
 ### Using DDEV
-
-```bash
-cd /path/to/project
-```
 
 ```bash
 ddev composer require lindemannrock/craft-formie-paragraph-field
@@ -70,118 +56,13 @@ ddev composer require lindemannrock/craft-formie-paragraph-field
 ddev craft plugin/install formie-paragraph-field
 ```
 
-### Via Control Panel
+## Documentation
 
-In the Control Panel, go to Settings → Plugins and click "Install" for Formie Paragraph Field.
-
-## Configuration
-
-### Plugin Settings
-
-Navigate to **Settings → Plugins → Formie Paragraph Field** to configure:
-- **Default Text Size**: Set the default size for new paragraph fields
-
-Invalid setting values are shown inline and are not saved.
-
-### Config File
-
-Create a `config/formie-paragraph-field.php` file to override default settings:
-
-```bash
-cp vendor/lindemannrock/craft-formie-paragraph-field/src/config.php config/formie-paragraph-field.php
-```
-
-Example configuration:
-
-```php
-// config/formie-paragraph-field.php
-return [
-    // Plugin name (optional - usually set via Control Panel)
-    'pluginName' => 'Custom Paragraph Field',
-
-    // Default text size for new fields
-    'defaultTextSize' => 'textLG',
-
-    // Custom text size options (replaces built-in options when defined)
-    'customTextSizes' => [
-        'textHuge' => [
-            'label' => 'Huge',
-            'classes' => 'text-2xl md:text-4xl lg:text-6xl'
-        ],
-        'textBrand' => [
-            'label' => 'Brand Text',
-            'classes' => 'font-brand text-brand-primary custom-spacing'
-        ]
-    ]
-];
-```
-
-See [Configuration Documentation](docs/CONFIGURATION.md) for all available options.
-
-**Note**:
-- You can use any CSS classes - Tailwind, Bootstrap, or your own custom styles
-- When `customTextSizes` is defined, it **replaces** the built-in options entirely
-- Without a config file, you get 5 built-in text sizes (XS to XL)
-
-## Built-in Text Size Classes
-
-| Size Value | Label | Tailwind Classes |
-|------------|-------|------------------|
-| `textXS` | Extra Small | `text-xs` |
-| `textSM` | Small | `text-sm` |
-| `textBase` | Base | `text-base` |
-| `textLG` | Large | `text-base sm:text-lg md:text-xl` |
-| `textXL` | Extra Large | `text-lg sm:text-xl md:text-2xl` |
-
-## Usage
-
-### Adding a Paragraph Field
-
-1. Open your form in Formie's form builder
-2. Click "Add Field" and select "Paragraph"
-3. Configure the field:
-   - **Content**: Enter paragraph text (supports Twig syntax)
-   - **Text Size**: Choose from available size options
-4. The content renders with proper styling and responsive sizing
-
-### Twig Content Examples
-
-```twig
-{# Simple text #}
-Welcome to our website!
-
-{# With translations #}
-{{ 'Welcome to our website!'|t }}
-
-{# With variables #}
-Hello {{ currentUser.name }}!
-
-{# With filters #}
-{{ 'important message'|upper }}
-
-{# Multi-line content #}
-This is the first paragraph.
-
-This is the second paragraph with {{ 'translation'|t }}.
-```
-
-### Templating
-
-Paragraph fields are rendered automatically by Formie:
-
-```twig
-{# Render the entire form #}
-{{ craft.formie.renderForm('contactForm') }}
-
-{# Or render specific field #}
-{% set form = craft.formie.forms.handle('contactForm').one() %}
-{{ craft.formie.renderField(form, 'paragraphField') }}
-```
+Full documentation is available in the [docs](docs/) folder.
 
 ## Support
 
-- **Documentation**: [https://github.com/LindemannRock/craft-formie-paragraph-field](https://github.com/LindemannRock/craft-formie-paragraph-field)
-- **Issues**: [https://github.com/LindemannRock/craft-formie-paragraph-field/issues](https://github.com/LindemannRock/craft-formie-paragraph-field/issues)
+- **Issues**: [GitHub Issues](https://github.com/LindemannRock/craft-formie-paragraph-field/issues)
 - **Email**: [support@lindemannrock.com](mailto:support@lindemannrock.com)
 
 ## License

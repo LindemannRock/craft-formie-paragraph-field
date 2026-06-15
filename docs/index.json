@@ -1,0 +1,7 @@
+{
+    "plugin": {
+        "name": "Formie Paragraph Field",
+        "handle": "formie-paragraph-field",
+        "description": "A display-only paragraph field for Formie — add static text content to forms with configurable text sizes."
+    }
+}

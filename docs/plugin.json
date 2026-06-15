@@ -1,0 +1,9 @@
+{
+    "name": "Formie Paragraph Field",
+    "handle": "formie-paragraph-field",
+    "description": "Paragraph field for Formie - Provides a multi-line paragraph field type for Craft CMS Formie plugin",
+    "version": "3.5.0",
+    "developer": "LindemannRock",
+    "developerUrl": "https://lindemannrock.com",
+    "documentationUrl": "https://github.com/LindemannRock/craft-formie-paragraph-field/blob/main/README.md"
+}
