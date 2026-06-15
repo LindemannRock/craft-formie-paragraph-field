@@ -9,7 +9,7 @@
 return [
     // Plugin meta
     'Formie Paragraph Field' => 'Formie Paragraph Field',
-    'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Configure los campos de párrafo y gestione los ajustes de texto predeterminados desde el área de configuración del plugin.',
+    'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Configure los campos de párrafo y gestione la configuración de texto predeterminada desde el área de configuración del plugin.',
     'Open Formie Paragraph Field' => 'Abrir Formie Paragraph Field',
 
     // Common
@@ -33,7 +33,7 @@ return [
     'Default Field Settings' => 'Configuración de campo predeterminada',
     'Default Text Size' => 'Tamaño de texto predeterminado',
     'The default text size for new paragraph fields' => 'El tamaño de texto predeterminado para los nuevos campos de párrafo',
-    'These settings will be used as defaults when creating new paragraph fields.' => 'Estos ajustes se utilizarán como valores predeterminados al crear nuevos campos de párrafo.',
+    'These settings will be used as defaults when creating new paragraph fields.' => 'Esta configuración se utilizará como valores predeterminados al crear nuevos campos de párrafo.',
 
     // Field schema (form builder)
     'Choose the size for the paragraph text.' => 'Elija el tamaño para el texto del párrafo.',

@@ -9,7 +9,7 @@
 return [
     // Plugin meta
     'Formie Paragraph Field' => 'Formie Paragraph Field',
-    'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Configurate i campi paragrafo e gestite le impostazioni predefinite del testo dall\'area delle impostazioni del plugin.',
+    'Configure paragraph fields and manage default text settings from the plugin settings area.' => 'Configurare i campi paragrafo e gestire le impostazioni predefinite del testo dall\'area delle impostazioni del plugin.',
     'Open Formie Paragraph Field' => 'Apri Formie Paragraph Field',
 
     // Common
