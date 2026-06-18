@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.5.1](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.5.0...v3.5.1) - 2026-06-18
+
+
+### Fixed
+
+* **i18n:** correct Portuguese translation strings for default text size ([2a8ae30](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/2a8ae30c617c0eedc3f3c6258122b0f5dcb9e2a4))
+* **i18n:** correct Spanish and Italian translation strings ([d8c884c](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/d8c884c716dc6135054a711deba0e0866975c22f))
+
 ## [3.5.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.4.0...v3.5.0) - 2026-06-07
 
 
