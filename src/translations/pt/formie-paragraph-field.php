@@ -23,17 +23,17 @@ return [
     'Small' => 'Pequeno',
 
     // Validation messages
-    'Default text size must be one of: {values}' => 'O tamanho de texto padrão deve ser um dos seguintes valores: {values}',
+    'Default text size must be one of: {values}' => 'O tamanho de texto predefinido deve ser um dos seguintes valores: {values}',
 
     // Settings: General
     'General Settings' => 'Definições gerais',
 
     // Settings: Default Field Settings
     'Custom Text Sizes' => 'Tamanhos de texto personalizados',
-    'Default Field Settings' => 'Definições de campo padrão',
-    'Default Text Size' => 'Tamanho de texto padrão',
-    'The default text size for new paragraph fields' => 'O tamanho de texto padrão para novos campos de parágrafo',
-    'These settings will be used as defaults when creating new paragraph fields.' => 'Estas definições serão utilizadas como valores padrão ao criar novos campos de parágrafo.',
+    'Default Field Settings' => 'Definições de campo predefinidas',
+    'Default Text Size' => 'Tamanho de texto predefinido',
+    'The default text size for new paragraph fields' => 'O tamanho de texto predefinido para novos campos de parágrafo',
+    'These settings will be used as defaults when creating new paragraph fields.' => 'Estas definições serão utilizadas como valores predefinidos ao criar novos campos de parágrafo.',
 
     // Field schema (form builder)
     'Choose the size for the paragraph text.' => 'Escolha o tamanho para o texto do parágrafo.',
