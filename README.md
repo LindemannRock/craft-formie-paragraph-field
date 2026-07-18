@@ -6,7 +6,7 @@
 [![Craft CMS](https://img.shields.io/badge/Craft%20CMS-5.0+-orange.svg)](https://craftcms.com/)
 [![Formie](https://img.shields.io/badge/Formie-3.0+-purple.svg)](https://verbb.io/craft-plugins/formie)
 [![PHP](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net/)
-[![License](https://img.shields.io/packagist/l/lindemannrock/craft-formie-paragraph-field.svg)](LICENSE)
+[![License](https://img.shields.io/packagist/l/lindemannrock/craft-formie-paragraph-field.svg)](LICENSE.md)
 
 A Craft CMS plugin that adds a display-only **Paragraph** field type to Verbb's Formie — static text content (intros, instructions, notices) with configurable text sizes.
 
