@@ -5,7 +5,7 @@
  * Paragraph field for Formie - Provides a multi-line paragraph field type
  *
  * @link      https://lindemannrock.com
- * @copyright Copyright (c) 2025 LindemannRock
+ * @copyright Copyright (c) 2025-2026 LindemannRock
  */
 
 namespace lindemannrock\formieparagraphfield;

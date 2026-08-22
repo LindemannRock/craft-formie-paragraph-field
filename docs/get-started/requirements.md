@@ -15,4 +15,4 @@ Composer pulls these packages automatically. Formie must also be installed and e
 | Package | Version | Purpose |
 |---------|---------|---------|
 | [verbb/formie](https://verbb.io/craft-plugins/formie) | 3.0+ | The forms plugin the Paragraph field plugs into — required, install in CP |
-| [lindemannrock/craft-plugin-base](https://github.com/LindemannRock/craft-plugin-base) | 5.0+ | Shared base plugin utilities (helpers, traits, settings) |
+| [lindemannrock/craft-plugin-base](https://github.com/LindemannRock/craft-plugin-base) | 5.26+ | Shared base plugin utilities (helpers, traits, settings) |

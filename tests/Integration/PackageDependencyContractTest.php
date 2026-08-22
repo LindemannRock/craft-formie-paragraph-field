@@ -1,0 +1,38 @@
+<?php
+/**
+ * LindemannRock Formie Paragraph Field
+ *
+ * @link      https://lindemannrock.com
+ * @copyright Copyright (c) 2026 LindemannRock
+ */
+
+declare(strict_types=1);
+
+namespace lindemannrock\formieparagraphfield\tests\Integration;
+
+use Composer\Semver\Semver;
+use lindemannrock\formieparagraphfield\tests\TestCase;
+
+/**
+ * Protects the minimum Base release supplying every imported shared API.
+ *
+ * @since 3.6.0
+ */
+final class PackageDependencyContractTest extends TestCase
+{
+    public function testBaseFloorStartsAtFirstReleaseContainingRequiredSettingsApis(): void
+    {
+        $composer = json_decode(
+            (string)file_get_contents(dirname(__DIR__, 2) . '/composer.json'),
+            true,
+            flags: JSON_THROW_ON_ERROR,
+        );
+        $constraint = $composer['require']['lindemannrock/craft-plugin-base'];
+
+        self::assertSame('^5.26', $constraint);
+        self::assertFalse(Semver::satisfies('5.25.99', $constraint));
+        self::assertTrue(Semver::satisfies('5.26.0', $constraint));
+        self::assertTrue(Semver::satisfies('5.99.0', $constraint));
+        self::assertFalse(Semver::satisfies('6.0.0', $constraint));
+    }
+}

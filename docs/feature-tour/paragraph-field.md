@@ -15,7 +15,7 @@ Add a block of static text to any Formie form — an intro, instructions, a noti
 2. Drag **Paragraph** from the field list onto a page.
 3. Fill in the settings (below) and save.
 
-![The Paragraph field settings in the Formie form builder](images/paragraph-field-settings.webp)
+![The Paragraph field settings in the Formie form builder](../images/paragraph-field-settings.webp)
 
 ## Field options
 

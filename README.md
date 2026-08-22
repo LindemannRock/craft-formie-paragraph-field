@@ -33,6 +33,7 @@ This plugin is in active development and not yet available on the Craft Plugin S
 - Craft CMS 5.0 or greater
 - PHP 8.2 or greater
 - Formie 3.0 or greater
+- [LindemannRock Plugin Base](https://github.com/LindemannRock/craft-plugin-base) 5.26+ (required by Composer)
 
 ## Installation
 

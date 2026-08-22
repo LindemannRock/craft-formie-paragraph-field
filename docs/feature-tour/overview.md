@@ -29,7 +29,7 @@ The Paragraph field is a *cosmetic* field: it shows content but collects no valu
 | The paragraph text, size, email inclusion | The **Paragraph** field on each Formie form |
 | The default text size + your own custom sizes | Settings → Plugins → Formie Paragraph Field, and `config/formie-paragraph-field.php` |
 
-![A Paragraph field in the Formie form builder](images/overview-form-builder.webp)
+![A Paragraph field in the Formie form builder](../images/overview-form-builder.webp)
 
 ## Next steps
 

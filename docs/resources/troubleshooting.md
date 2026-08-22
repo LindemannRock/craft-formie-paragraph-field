@@ -49,6 +49,17 @@ Common issues and how to resolve them. If something here doesn't cover your case
 
 **Why:** Escaping prevents content entered in the form builder from injecting markup into the page.
 
+## Paragraph content is missing from notification emails
+
+**Quick checks:**
+
+1. Open the Paragraph field in Formie and confirm **Include in Email** is enabled.
+2. Confirm the notification includes **All Form Fields** or **All Visible Fields**. **All Non Empty Fields** intentionally excludes display-only fields.
+
+**Fix:** Update Formie Paragraph Field, then preview the notification again. You do not need to resave the field or notification.
+
+**Why:** Older releases returned a template path that Formie's email renderer could not resolve, so the Paragraph content was silently omitted while the rest of the notification still rendered.
+
 ## The paragraph doesn't appear in submissions
 
 **Fix:** Expected — Paragraph is a *cosmetic* field. It displays content but collects no value, so it never appears as submission data. Use a real input field if you need to capture something.

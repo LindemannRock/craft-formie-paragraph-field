@@ -3,7 +3,7 @@
  * Formie Paragraph Field plugin for Craft CMS 5.x
  *
  * @link      https://lindemannrock.com
- * @copyright Copyright (c) 2025 LindemannRock
+ * @copyright Copyright (c) 2025-2026 LindemannRock
  */
 
 namespace lindemannrock\formieparagraphfield\fields;
@@ -116,12 +116,12 @@ class Paragraph extends CosmeticField
         // Create JavaScript cases for each size
         $jsCases = [];
         foreach ($sizeMap as $value => $label) {
-            $jsCases[] = 'field.settings.textSize === ' . Json::encode($value) . ' ? ' . Json::encode($label);
+            $jsCases[] = 'field.settings.textSize === ' . self::encodePreviewLiteral($value) . ' ? ' . self::encodePreviewLiteral($label);
         }
 
         // Use first available option as fallback instead of hardcoded 'Base'
         $firstOption = !empty($sizeOptions) ? $sizeOptions[0]['label'] : 'Base';
-        $jsCondition = implode(' : ', $jsCases) . ' : ' . Json::encode($firstOption);
+        $jsCondition = implode(' : ', $jsCases) . ' : ' . self::encodePreviewLiteral($firstOption);
 
         $sizeLabel = Html::encode(Craft::t('formie-paragraph-field', 'Size:'));
         $placeholder = Html::encode(Craft::t('formie-paragraph-field', 'Paragraph content will appear here'));
@@ -197,7 +197,7 @@ class Paragraph extends CosmeticField
      */
     public static function getEmailTemplatePath(): string
     {
-        return '@formie-paragraph-templates/fields/paragraph/email';
+        return 'formie-paragraph-field/fields/paragraph/email';
     }
 
 
@@ -274,5 +274,17 @@ class Paragraph extends CosmeticField
                '<small style="display: block; color: #999; margin-bottom: 5px;">' . $label . '</small>' .
                $content .
                '</div>';
+    }
+
+    /**
+     * Encode a JavaScript string literal that survives Formie's preview delimiter rewrite.
+     */
+    private static function encodePreviewLiteral(string $value): string
+    {
+        return str_replace(
+            ['$', '{', '}'],
+            ['\\u0024', '\\u007B', '\\u007D'],
+            Json::encode($value),
+        );
     }
 }

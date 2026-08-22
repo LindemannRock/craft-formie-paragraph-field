@@ -2,15 +2,15 @@
 
 Get Formie Paragraph Field running in a couple of minutes. By the end you'll have a block of static text rendering inside a form — no input, just content your visitors read.
 
-## 1. Install the plugin
+## Before you start
 
 > See [Installation](installation.md) for full details. Make sure [Formie](https://verbb.io/craft-plugins/formie) is installed and enabled first.
 
-## 2. Add a Paragraph field
+## 1. Add a Paragraph field
 
 In the Control Panel, open **Formie → Forms** and edit (or create) a form. Drag **Paragraph** from the field list onto a page.
 
-## 3. Write the content
+## 2. Write the content
 
 In the field's settings:
 
@@ -20,7 +20,7 @@ In the field's settings:
 
 Save the form.
 
-## 4. Verify it works
+## 3. Verify it works
 
 Open the form on your site front-end (or use Formie's preview). Your paragraph appears as static text between the other fields — there's nothing to fill in; it's display-only content.
 

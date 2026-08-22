@@ -1,28 +1,25 @@
-# Shared Features
+# Shared features
 
-Formie Paragraph Field uses the following shared libraries and features.
+Formie Paragraph Field uses LindemannRock Plugin Base 5.26 or newer for the small pieces of shared behavior that should stay consistent across plugins. You normally do not call these APIs yourself, but knowing their role helps when diagnosing settings or template behavior.
 
-## `lindemannrock/base`
+## Plugin bootstrap and Twig names
 
-| Feature | Description |
-|---------|-------------|
-| `PluginHelper::bootstrap()` | Initializes base module, Twig globals, and logging configuration |
-| `SettingsConfigTrait` | Config file override detection and log level validation |
-| `SettingsDisplayNameTrait` | Standardized plugin name helper methods |
+`PluginHelper::bootstrap()` initializes the shared plugin helpers and registers the `formieParagraphFieldHelper` Twig global. See [Twig globals](twig-globals.md) for the values it exposes.
 
-### Details
+## Settings behavior
 
-**PluginHelper::bootstrap()**
+The settings model uses these shared contracts:
 
-Provides plugin name helpers in Twig templates (see Twig Globals section)
+| Shared API | What it does here |
+|---|---|
+| `PluginNameSettingsTrait` | Validates the configurable Control-Panel plugin name and rejects HTML or control characters. |
+| `SettingsConfigTrait` | Detects values supplied by `config/formie-paragraph-field.php`, allowing the settings page to show and lock config-controlled fields. |
+| `SettingsDisplayNameTrait` | Derives the display-name forms used by the Twig helper. |
+| `SettingsPostHelper` | Normalizes native settings POST values before assigning them to typed properties, so malformed array input becomes a validation error instead of a PHP type failure. |
 
-**SettingsConfigTrait**
+These APIs are why the package requires Plugin Base 5.26+: that is the first Base release containing the complete settings contract used by this plugin.
 
-Settings can be overridden via config/{plugin-handle}.php. Debug logging requires devMode.
+## Next steps
 
-**SettingsDisplayNameTrait**
-
-Provides getDisplayName(), getFullName(), getPluralDisplayName(), etc.
-
----
-
+- [Configuration](../get-started/configuration.md) explains the Control-Panel and config-file precedence.
+- [Twig globals](twig-globals.md) lists the shared display-name values available to templates.
