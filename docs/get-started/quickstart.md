@@ -1,10 +1,13 @@
 # Quickstart
 
-Get Formie Paragraph Field running in a couple of minutes. By the end you'll have a block of static text rendering inside a form — no input, just content your visitors read.
+Add a block of static text to a Formie form. By the end you'll have content rendering between the form's input fields for visitors to read.
 
 ## Before you start
 
-> See [Installation](installation.md) for full details. Make sure [Formie](https://verbb.io/craft-plugins/formie) is installed and enabled first.
+Complete [Installation & Setup](installation.md#post-install-setup) first. You should have:
+
+- Formie Paragraph Field and [Formie](https://verbb.io/craft-plugins/formie) installed and enabled
+- A Formie form you can edit
 
 ## 1. Add a Paragraph field
 

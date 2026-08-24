@@ -1,6 +1,6 @@
 # Translations
 
-Formie Paragraph Field includes full translations for 12 languages out of the box.
+Run Formie Paragraph Field's Control Panel UI in any of 12 included languages, and override its wording from your project when needed.
 
 ## Supported languages
 
@@ -22,7 +22,7 @@ Formie Paragraph Field includes full translations for 12 languages out of the bo
 Translations are applied automatically based on the user's preferred language in Craft's Control Panel settings.
 
 > [!NOTE]
-> A paragraph field's **content** is also run through Craft's translation layer, so a content string that exists in your site's static translation files is translated on the front end too.
+> A paragraph field's **content** uses Formie's `formie` translation category. Add matching content strings to your project's `translations/{locale}/formie.php` file when the paragraph itself needs translation.
 
 ## Overriding translations
 

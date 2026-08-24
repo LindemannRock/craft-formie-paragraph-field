@@ -1,6 +1,6 @@
-# Twig Globals
+# Twig globals
 
-Formie Paragraph Field provides the following global variables in your Twig templates.
+Use `formieParagraphFieldHelper` when a Twig template needs the plugin's configured display name instead of a hard-coded label.
 
 ## `formieParagraphFieldHelper`
 
@@ -23,6 +23,3 @@ Formie Paragraph Field provides the following global variables in your Twig temp
 {{ formieParagraphFieldHelper.lowerDisplayName }}
 {{ formieParagraphFieldHelper.pluralLowerDisplayName }}
 ```
-
----
-

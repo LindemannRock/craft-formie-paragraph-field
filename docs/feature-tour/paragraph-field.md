@@ -42,6 +42,7 @@ On the live form the field outputs a single paragraph element:
 - Any **CSS classes** you set in the Advanced tab are appended.
 - Content keeps its line breaks and is HTML-escaped.
 
+> [!NOTE]
 > The plugin emits class names; your site's stylesheet decides how they look. The built-in sizes assume Tailwind-style utilities, but you can point the size keys at any CSS via [custom text sizes](../get-started/configuration.md#custom-text-sizes).
 
 ### In notification emails

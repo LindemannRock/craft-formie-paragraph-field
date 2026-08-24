@@ -26,15 +26,15 @@ composer require lindemannrock/craft-formie-paragraph-field && php craft plugin/
 ddev composer require lindemannrock/craft-formie-paragraph-field && ddev craft plugin/install formie-paragraph-field
 ```
 
-## Copy Config File (Optional)
+## Post-Install Setup
 
-To set the default text size or add custom text sizes from a config file, copy the sample config to your project:
+Formie Paragraph Field works as soon as it and Formie are installed and enabled — there is no salt to generate or template to copy.
 
-```bash
-cp vendor/lindemannrock/craft-formie-paragraph-field/src/config.php config/formie-paragraph-field.php
-```
+### Review configuration
 
-See [Configuration](configuration.md) for the available options.
+Use **Open Formie Paragraph Field** on the install welcome screen, or go to **Settings → Plugins → Formie Paragraph Field**. Choose the default text size for new Paragraph fields and, if needed, change the plugin name shown in the Control Panel.
+
+See [Configuration](configuration.md) for config-file overrides and custom text sizes.
 
 ## Quick Start
 

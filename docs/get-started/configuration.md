@@ -1,8 +1,14 @@
 # Configuration
 
-The plugin has a small settings surface: a default text size for new paragraph fields, an optional set of your own text sizes, and the Control-Panel display name. The **Default Text Size** and **plugin name** live in the Control Panel under **Settings → Plugins → Formie Paragraph Field**. **Custom text sizes are config-file only** — there's no Control-Panel field for them.
+Set the starting text size for new Paragraph fields, define size choices that match your site's CSS, or rename the plugin in the Control Panel. The **Default Text Size** and **plugin name** live under **Settings → Plugins → Formie Paragraph Field**. **Custom text sizes are config-file only** — there's no Control-Panel field for them.
 
-> Copy the sample config to start: `cp vendor/lindemannrock/craft-formie-paragraph-field/src/config.php config/formie-paragraph-field.php`. Anything set in `config/formie-paragraph-field.php` overrides the Control Panel value and locks that field in the UI.
+For advanced configuration, copy the sample config to your project:
+
+```bash
+cp vendor/lindemannrock/craft-formie-paragraph-field/src/config.php config/formie-paragraph-field.php
+```
+
+Anything set in `config/formie-paragraph-field.php` overrides the Control Panel value and locks that field in the UI.
 
 ## Options
 
@@ -24,6 +30,7 @@ Each "text size" is a key that maps to a label (shown in the field's **Text Size
 | `textLG` | Large | `text-base sm:text-lg md:text-xl` |
 | `textXL` | Extra Large | `text-lg sm:text-xl md:text-2xl` |
 
+> [!NOTE]
 > The plugin only outputs these class names — your site's CSS supplies what they look like. The built-ins assume Tailwind, but the classes are just strings: use Bootstrap, custom CSS, or anything else (see custom sizes below).
 
 ## Custom text sizes
@@ -61,6 +68,9 @@ Make `defaultTextSize` one of your custom keys when you replace the built-ins �
 
 return [
     '*' => [
+        // Optional Control Panel display name
+        // 'pluginName' => 'Formie Paragraph Field',
+
         'defaultTextSize' => 'textBase',
         'customTextSizes' => [],
     ],

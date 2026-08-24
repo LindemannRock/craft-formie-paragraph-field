@@ -18,6 +18,7 @@ The class list is, in order:
 
 The content itself is `nl2br(escaped + translated)` — line breaks become `<br>`, HTML is escaped, and the string passes through Formie's translation layer (`Craft::t('formie', …)`).
 
+> [!NOTE]
 > The plugin only emits class names. The built-in sizes assume Tailwind-style utilities (`text-xs` … `text-lg sm:text-xl md:text-2xl`); your site's CSS supplies the actual styling. Map the size keys to any framework or custom CSS via [custom text sizes](../get-started/configuration.md#custom-text-sizes).
 
 ## HTML tag customization

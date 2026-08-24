@@ -31,9 +31,8 @@ Common issues and how to resolve them. If something here doesn't cover your case
 
 1. Is `customTextSizes` valid PHP in `config/formie-paragraph-field.php`?
 2. Each entry needs both a `label` and `classes`.
-3. Clear caches after editing config.
 
-**Fix:** Correct the config syntax and clear caches. Remember that defining `customTextSizes` **replaces** the built-in sizes entirely — include any built-ins you still want.
+**Fix:** Correct the config syntax and reload the form builder. Remember that defining `customTextSizes` **replaces** the built-in sizes entirely — include any built-ins you still want.
 
 **Why:** Custom sizes are config-file only (there's no Control-Panel field), and a non-empty list overrides the defaults.
 
