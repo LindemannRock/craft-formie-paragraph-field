@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.5.2](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.5.1...v3.5.2) (2026-08-25)
+
+
+### Fixed
+
+* **fields:** harden rendering and quality gates ([696889b](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/696889b7d5eb44c3f8de3d3b4b9bdcafeacb0b5e))
+* remove unused linkMode parameter from error summary ([1bff900](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/1bff900799b7885ac3d805b6781e3a1508692b09))
+* remove unused translationCategory from error summary ([3d1617d](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/3d1617db70c375fa46c2ec692dc0564d7758964a))
+
 ## [3.5.1](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.5.0...v3.5.1) - 2026-06-18
 
 
