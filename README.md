@@ -3,9 +3,9 @@
 # Formie Paragraph Field for Craft CMS
 
 [![Latest Version](https://img.shields.io/packagist/v/lindemannrock/craft-formie-paragraph-field.svg)](https://packagist.org/packages/lindemannrock/craft-formie-paragraph-field)
-[![Craft CMS](https://img.shields.io/badge/Craft%20CMS-5.10+-orange.svg)](https://craftcms.com/)
+[![Craft CMS](https://img.shields.io/badge/Craft%20CMS-5.11+-orange.svg)](https://craftcms.com/)
 [![Formie](https://img.shields.io/badge/Formie-3.0+-purple.svg)](https://verbb.io/craft-plugins/formie)
-[![Plugin Base](https://img.shields.io/badge/Plugin%20Base-5.38%2B-4c6ef5.svg)](https://github.com/LindemannRock/craft-plugin-base)
+[![Plugin Base](https://img.shields.io/badge/Plugin%20Base-5.39.0%2B-4c6ef5.svg)](https://github.com/LindemannRock/craft-plugin-base)
 [![PHP](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net/)
 [![License](https://img.shields.io/packagist/l/lindemannrock/craft-formie-paragraph-field.svg)](LICENSE.md)
 
@@ -31,10 +31,10 @@ This plugin is in active development and not yet available on the Craft Plugin S
 
 ## Requirements
 
-- Craft CMS 5.10 or greater
+- Craft CMS 5.11 or greater
 - PHP 8.2 or greater
 - Formie 3.0 or greater
-- [LindemannRock Plugin Base](https://github.com/LindemannRock/craft-plugin-base) 5.38+ (required by Composer)
+- [LindemannRock Plugin Base](https://github.com/LindemannRock/craft-plugin-base) 5.39.0+ (required by Composer)
 
 ## Installation
 
