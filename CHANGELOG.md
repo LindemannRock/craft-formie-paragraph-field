@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.0](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.5.2...v3.6.0) (2026-10-13)
+
+
+### Added
+
+* **deps:** require Craft 5.11 and Base 5.39 ([733c384](https://github.com/LindemannRock/craft-formie-paragraph-field/commit/733c384febd55f6b1d7fcf16b6260d0c368b4292))
+
 ## [3.5.2](https://github.com/LindemannRock/craft-formie-paragraph-field/compare/v3.5.1...v3.5.2) - 2026-08-25
 
 
